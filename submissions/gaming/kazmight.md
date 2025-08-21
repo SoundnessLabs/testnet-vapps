@@ -1,9 +1,9 @@
 # vApp Submission: Soundyz
 
 ## Verification
-- **github_username**: "kazmight"
-- **discord_id**: "1089834447454609490"  
-- **timestamp**: "2025-08-21"
+- **github_username**: **kazmight**
+- **discord_id**: **1089834447454609490** 
+- **timestamp**: **2025-08-21**
 
 ---
 
@@ -48,27 +48,6 @@ Soundyz is designed as a **"Play-to-Prove" ecosystem** where NFTs are more than 
 
 ### Architecture
 **System Design Overview**
-
-+------------------+ +----------------+ +------------------+
-| Frontend | <--> | Backend API | <--> | zk-Proof Engine|
-| React/Next.js | | Node.js/Express| | Battle Logic ZKP |
-+------------------+ +----------------+ +------------------+
-| | |
-v v v
-+---------------------------------------------------------------------+
-| Soundness Layer Testnet |
-| - ERC-721 NFT Minting (Soundyz) |
-| - Decentralized Marketplace |
-| - On-chain Proof Verification (zk) |
-+---------------------------------------------------------------------+
-|
-v
-+--------------------------+
-| Decentralized Storage |
-| (IPFS + WALRUS Sync) |
-+--------------------------+
-
-
 - **Frontend** → User-facing web interface (mint, trade, battle).  
 - **Backend API** → Manages off-chain computations and player state.  
 - **zk-Proof Engine** → Generates zkProofs for every battle outcome.  
