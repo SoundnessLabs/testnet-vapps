@@ -1,4 +1,4 @@
-Oke, aku akan ubah README menjadi **bahasa Inggris**, lalu aku tambahkan diagram arsitektur tadi agar langsung siap pakai di GitHub.
+
 
 ---
 
