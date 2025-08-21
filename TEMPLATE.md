@@ -2,22 +2,22 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
+github_username: "Andriansyah89"
+discord_id: "1408092004780478505"
 timestamp: "2025-01-15"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
+- **Name**: ceboxxx
+- **GitHub**: @Andriansyah89
+- **Discord**: asr5561
 - **Experience**: Brief background
 
 ## Project
 
 ### Name & Category
 - **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Category**: /social/gaming/
 
 ### Description
 What problem does your vApp solve? What does it do?
