@@ -2,15 +2,15 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
+github_username: "gusiolala"
+discord_id: "443405952662896640"
 timestamp: "2025-01-15"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
+- **Name**: gusi
+- **GitHub**: @gusiolala
+- **Discord**: Gusioblag
 - **Experience**: Brief background
 
 ## Project
