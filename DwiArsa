@@ -1,0 +1,74 @@
+# vApp Submission: SoundPlay – Discord Gamified Rewards
+
+## Verification
+github_username: "DwiArsa"
+discord_id: "1033918211160293498"
+timestamp: "2025-08-21"
+
+## Developer
+- Name: DwiArsa
+- GitHub: DwiArsa
+- Discord: 1033918211160293498
+- Experience: |
+    Web3 enthusiast with hands-on experience in community management, crypto trading
+    education, affiliate marketing, memecoin development, and testnet participation.
+    Skilled in Telegram/Discord moderation, crypto analysis, and ecosystem research.
+    Passionate about decentralized innovation, real community engagement, and
+    supporting early-stage blockchain projects.
+
+## Project
+
+### Name & Category
+- Project: SoundPlay – Discord Gamified Rewards
+- Category: gaming/social
+
+### Description
+SoundPlay is a gamified Discord experience where community members can earn
+Sound Points by completing quests, joining mini-games, or participating in
+activities. These points can be exchanged for limited-supply roles or NFTs.
+The rarity of roles/NFTs will create a dynamic market where demand and scarcity
+increase their value.
+
+### SL Integration
+Soundness Layer (SL) will secure point generation, role/NFT ownership, and
+transactions. SL ensures verifiable fairness in games, transparent supply
+tracking of NFTs, and tamper-proof reward distribution.
+
+## Technical
+
+### Architecture
+1. Discord bot for interaction (quests, games, reward system).
+2. Backend to handle point logic and integrate with Soundness Layer.
+3. Smart contract on SL to manage roles/NFTs, scarcity, and transfers.
+
+### Stack
+- Frontend: Discord bot (Node.js/TypeScript)
+- Backend: Node.js + Express
+- Blockchain: Soundness Layer (SL)
+- Storage: WALRUS/IPFS for metadata
+
+### Features
+1. Earn Sound Points via quests and mini-games.
+2. Exchange points for exclusive roles or NFTs.
+3. Scarcity-based marketplace with dynamic value.
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [✅] Basic quest system integrated in Discord
+- [✅] Initial Sound Points logic
+- [✅] SL integration for point verification
+
+### MVP (4-8 weeks)
+- [✅] NFT/role redemption live
+- [✅] Marketplace logic with scarcity rules
+- [✅] Full bot features + community testing
+
+## Innovation
+Combines gamification + Web3 inside Discord. Unique because it links
+community engagement with real ownership of scarce roles/NFTs powered by
+Soundness Layer.
+
+## Contact
+- Discord: 1033918211160293498
+- GitHub: DwiArsa
