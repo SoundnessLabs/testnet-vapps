@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Wrapper: jalankan soundness-cli via tracker
+# Contoh: ./scli status
+#         ./scli proof help
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+exec node "$SCRIPT_DIR/tracker.js" soundness-cli "$@"
