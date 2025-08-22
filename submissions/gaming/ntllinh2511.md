@@ -54,8 +54,26 @@ Winners of the game can be rewarded with a special **“Soundness Guess Testnet 
 - [ ] Enable NFT **staking** and **evolution mechanics** to drive long-term engagement.
 
 ---
+## 5. Activity & Integration Diagram
 
-## 5. Contacts
+The diagram below shows how the game connects to the Soundness Layer for verifiable gameplay:
+
+```mermaid
+flowchart TD
+    A[Player] --> B[Web UI]
+    B --> C[Backend API]
+    C --> D[Game Engine]
+    D --> E[Secret Generator - SHA-256 daily]
+    E --> F[Commit Hash]
+    F --> G[Soundness Layer]
+    G --> H[Explorer Link]
+
+    D --> I[Hint Generator - subrange contains secret]
+    D --> J[Result - Win or Lose]
+    J --> K[NFT - future]
+```
+
+## 6. Contacts
 - **GitHub:** ntllinh2511
 - **Discord:** ntllinh2511
 - **X (Twitter):** @ntl_linh2511
