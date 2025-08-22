@@ -2,15 +2,15 @@
 
 ## Verification
 ```yaml
-github_username: "example-user"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "savefork29"
+discord_id: "757949399480664115"
+timestamp: "2025-08-22"
 ```
 
 ## Developer
-- **Name**: Example Developer
-- **GitHub**: @example-user
-- **Discord**: example#1234
+- **Name**: Chaos
+- **GitHub**: @savefork29
+- **Discord**: progs#6587
 - **Experience**: 3 years Web3, identity systems
 
 ## Project
@@ -43,10 +43,11 @@ SL smart contracts coordinate identity verification across chains. ZK proofs ena
 
 ## Timeline
 
-### PoC (3 weeks)
-- [x] SL identity contract
-- [x] Basic frontend
-- [ ] Cross-chain verification
+| Phase | Duration | Tasks |
+|-------|----------|-------|
+| PoC   | 3 weeks  | SL identity contract, Basic frontend, Cross-chain verification |
+| MVP   | 6 weeks  | Full verification system, API for developers, Mobile support |
+
 
 ### MVP (6 weeks)
 - [ ] Full verification system
