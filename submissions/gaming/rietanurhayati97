@@ -1,0 +1,96 @@
+# vApp Submission: Soundness Gaming Arena
+
+## Verification
+```yaml
+github_username: "rietanurhayati97"
+discord_id: "967380164579303468"
+timestamp: "2025-08-21"
+```
+
+## Developer
+- **Name**: Rieta Nurhayati
+- **GitHub**: @rietanurhayati97
+- **Discord**: nocaption15
+- **Experience**: Web3 enthusiast with interest in blockchain gaming and decentralized applications. Basic knowledge of smart contracts and frontend development.
+
+## Project
+
+### Name & Category
+- **Project**: Soundness Gaming Arena
+- **Category**: gaming
+
+### Description
+A decentralized gaming platform where players can join quick mini-games, earn points, and trade in-game assets. Scores and leaderboards are stored on-chain for transparency and fairness.
+
+### SL Integration  
+This project will use Soundness Layer for:
+
+Fast and secure transaction processing for in-game actions
+
+zkApp integration to verify fair play and prevent cheating
+
+On-chain storage of player scores and assets
+
+## Technical
+
+### Architecture
+A simple client-server structure:
+
+Frontend communicates directly with Soundness Layer smart contracts
+
+Game logic handled off-chain but results verified via zkProofs
+
+Leaderboard and assets stored on-chain
+
+### Stack
+- **Frontend**: React.js / Next.js
+- **Backend**: Node.js (optional for APIs)
+- **Blockchain**: Soundness Layer testnet
+- **Storage**: WALRUS/IPFS for game metadata
+
+### Features
+1. Wallet-based login
+
+
+2. On-chain leaderboard
+
+
+3. Asset minting & trading (simple NFTs as in-game items)
+
+## Timeline
+
+### PoC (2-4 weeks)
+[x] Basic functionality (wallet connect, play game)
+
+[x] SL integration for score submission
+
+[ ] Simple UI
+
+### MVP (4-8 weeks)  
+[ ] Full feature set (leaderboard, asset trading)
+
+[ ] Production-ready demo
+
+[ ] User testing with community
+
+## Innovation
+Unlike traditional games, this project ensures transparency and fairness by putting scores and rewards on-chain. zkProof integration guarantees no cheating while keeping gameplay smooth.
+
+## Contact
+Discord: nocaption15
+
+GitHub: @rietanurhayati97
+
+Email: alifahalfakamala053@gmail.com
+
+Twitter: @Ritanurhayati97
+
+
+**Checklist before submitting:**
+[x] All fields completed
+
+[x] GitHub username matches PR author
+
+[x] SL integration explained
+
+[x] Timeline is realistic
