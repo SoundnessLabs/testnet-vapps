@@ -1,0 +1,85 @@
+# vApp Submission: vCertificate
+
+## Verification
+```yaml
+github_username: "afan9432"
+discord_id: "828694076000829470"
+timestamp: "2025-08-22"
+```
+
+## Developer
+- **Name**: Moch.Lukman Nurul Zaman
+- **GitHub**: @afan9432
+- **Discord**: alfi#6833
+- **Experience**: Full-stack developer with a strong interest in blockchain and education. Previously built e-learning systems and several simple dApps.
+
+## Project
+
+### Name & Category
+- **Project**: vCertificate
+- **Category**: identity
+
+### Description
+vCertificate is a blockchain-based certificate verification platform. Many educational institutions and informal courses issue certificates that are hard to verify or easily forged. With vCertificate, each certificate will be recorded on-chain and publicly verifiable using a unique hash or QR code.
+
+### SL Integration  
+vCertificate will use Soundness Layer (SL) for:
+
+Verified identity of certificate issuers
+
+On-chain credential issuance
+
+Immutable storage of certificate metadata
+
+Reputation scoring for institutions and certificate holders via SL modules
+
+## Technical
+
+### Architecture
+Institutions sign and publish certificate metadata
+
+Certificate data is recorded on-chain (SL) and on IPFS
+
+Public users can verify authenticity via QR code or hash
+
+Issuer reputation tracked via Soundness Layer modules
+
+### Stack
+- **Frontend**: Next.js + Tailwind
+- **Backend**: Node.js + Express
+- **Blockchain**: Soundness Layer
+- **Storage**: IPFS + PostgreSQL (for caching & logs)
+
+### Features
+Upload & hash certificates
+
+Public verification via QR/hash
+
+Issuer & holder reputation system
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [ ] Initial project setup & basic UI
+- [ ] SL integration for verified issuers
+- [ ] Simulate certificate upload & verification
+
+### MVP (4-8 weeks)  
+- [ ] Full issuer dashboard for certificate generation
+- [ ] Public verification portal
+- [ ] Reputation system for issuers
+
+## Innovation
+Currently, there’s no simple, blockchain-based certification platform focused on non-formal institutions. vCertificate offers a practical and transparent solution for future-proof education credentials.
+
+## Contact
+Discord: alfi#6833
+
+Updates will be shared via GitHub repo and the official Soundness Discord
+
+
+**Checklist before submitting:**
+- [ ] All fields completed
+- [ ] GitHub username matches PR author  
+- [ ] SL integration explained
+- [ ] Timeline is realistic
