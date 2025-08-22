@@ -1,4 +1,4 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: ProofSocial
 
 ## Verification
 ```yaml
