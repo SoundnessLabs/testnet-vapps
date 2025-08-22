@@ -11,35 +11,35 @@ timestamp: "2025-08-22"
 - **Name**: Davis Purwo Aji
 - **GitHub**: @davis9c
 - **Discord**: cixzer
-- **Experience**: Brief background
+- **Experience**: Backend Developer Frontend Developer AI Enthusiast Android Developer
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: ProofSocial
+- **Category**: social
 
 ### Description
-What problem does your vApp solve? What does it do?
-
+Proofsocial is a simple social application that allows users to prove that they are members of the community (for example Discord Server or Github Org) without having to share their personal data directly.
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+Use the Soundness Layer to create and verify ZK-Proofs that the user is really a member of a community.
 
+SL will function as a prover/verifier so that the original data (such as email or username) does not need to be displayed in the blockchain.
 ## Technical
 
 ### Architecture
-High-level system design and approach
+User → Frontend (React) → Backend (Node.js) → Soundness Layer prover/verifier → Blockchain (SL testnet).
 
 ### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
+- **Frontend**: React + Tailwind
+- **Backend**: Node.js + Express
+- **Blockchain**: Soundness Layer testnet
+- **Storage**: Minimum, only user metadata (postgreSQL or in-memory for POC)
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+1. User login with Github/Discord (OAUTH).
+2. Generate Proof of Membership via SL.
+3. Proof verification and display the "Verified Member" badge in social applications.
 
 ## Timeline
 
@@ -54,10 +54,11 @@ High-level system design and approach
 - [ ] User testing
 
 ## Innovation
-What makes this unique? Why will people use it?
+Social proof facilitates communication to provide the status of "verified members" with maintained privacy. No need to divulge original identity, quite a proof from the Soundness Layer.
 
 ## Contact
-Preferred contact method and where you'll share updates.
+Discord: cixzer
+GitHub: @davis9c
 
 
 **Checklist before submitting:**
