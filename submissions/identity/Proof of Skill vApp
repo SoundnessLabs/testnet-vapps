@@ -1,0 +1,101 @@
+Proposal: Proof of Skill vApp
+
+Category
+Identity
+
+Overview
+The Proof of Skill vApp creates a decentralized, verifiable credential system where individuals can earn tamper proof skill badges on chain. Instead of relying on unverified resumes or LinkedIn endorsements, users receive attestations from verified community members, mentors, or organizations. These attestations are stored using Soundness Layer's zero knowledge infrastructure, making them cryptographically verifiable and universally recognized across platforms.
+
+Problem
+• Unverifiable Claims: Anyone can claim expertise on traditional platforms
+• Centralized Gatekeepers: LinkedIn, universities, and certification bodies control credibility
+• No Interoperability: Skills verified on one platform can't be used elsewhere
+• Merit vs. Influence Gap: Skilled individuals without social proof get overlooked
+
+Real world impact: DAOs waste time vetting contributors, freelance platforms struggle with fake expertise, and talented developers can't prove their abilities without extensive portfolios.
+
+Solution
+A decentralized skill attestation system with built in anti gaming mechanisms:
+
+Core Features
+• Wallet Based Identity: User profiles linked to wallet addresses
+• Community Issued Badges: Verified community members can issue skill attestations
+• Zero Knowledge Verification: Skills proven without revealing personal data
+• Cross Platform Integration: Other apps can query and verify badges
+• Reputation Weighted Attestations: Badge validity determined by issuer reputation
+
+Anti Gaming Measures
+• Staked Attestations: Skill verifiers must stake tokens that can be slashed for false attestations
+• Reputation Requirements: Only established community members (minimum on chain history) can issue badges
+• Peer Review System: Controversial badges subject to community challenges
+• Skill Decay: Badges lose weight over time without peer confirmation
+
+Use Case Example
+Scenario: A DeFi DAO needs to hire React developers for a frontend bounty.
+
+Traditional Process:
+• Developers submit portfolios and LinkedIn profiles
+• DAO manually reviews dozens of applications
+• High risk of hiring unqualified developers
+
+With Proof of Skill:
+• DAO sets requirement: "React Developer" badge from recognized tech communities
+• Developers instantly prove qualification through verified on chain badges
+• DAO reduces vetting time from days to minutes
+• Qualified developers get opportunities regardless of social media following
+
+Technical Architecture
+
+Soundness Layer Integration
+1. Identity Layer: Wallet addresses as user identities
+2. Attestation Storage: Skill badges stored as zero knowledge proofs
+3. Verification Logic: ZK circuits verify badge authenticity and issuer authority
+4. Reputation System: On chain scoring based on attestation accuracy over time
+
+Smart Contract Structure
+• UserRegistry: Maps wallets to skill profiles
+• BadgeFactory: Creates and validates skill attestations
+• ReputationOracle: Tracks issuer credibility and badge accuracy
+• ChallengeSystem: Allows community disputes of questionable badges
+
+Frontend Components
+• Simple web interface for badge issuance and verification
+• Developer API for third party integrations
+• Mobile friendly responsive design
+
+Development Timeline
+Week 1: Research similar identity protocols + finalize idea details.
+
+Week 2: Core Development
+• Implement basic attestation smart contracts
+• Build reputation weighting system
+• Create zero knowledge proof circuits for badge verification
+
+Week 3: Frontend & Integration
+• Develop web interface for badge management
+• Build API endpoints for third party verification
+• Create documentation and integration guides
+
+Week 4: Testing & Optimization
+• Submit and deploy first prototype for testnet feedback.
+• Conduct security audits and stress testing
+
+Bootstrap Strategy
+Phase 1: Partner with existing crypto communities (Discord servers, GitHub organizations)
+Phase 2: Integrate with popular platforms (Gitcoin, DeWork, Layer3)
+Phase 3: Enable cross chain reputation bridging
+
+Expected Impact
+• For Users: Portable, verifiable skill credentials
+• For Communities: Efficient contributor vetting
+• For Soundness Layer: Increased testnet usage and real world validation
+
+Long term Vision
+• Universal Skill Graph: Interoperable reputation across all blockchain applications
+• Merit Based Opportunities: Skills matter more than social media followers
+• Decentralized Credentialing: Reduced reliance on traditional certification bodies
+
+GitHub Username: [idle0x]
+Discord ID: [537033445767905280]
+Estimated Team Size: 1 to 2 developers
+Additional Resources Needed: Community partnerships for initial badge issuers
