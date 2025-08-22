@@ -1,4 +1,4 @@
-# vApp Submission: [ConnectSphere]
+# vApp Submission: [ConnectSphere Project Name]
 
 ## Verification
 ```yaml
