@@ -219,5 +219,9 @@ Soundness provides a verifiable execution environment ideal for anchoring commit
 
 ---
 
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/757f049b-bc84-40e1-bbe6-fbe284996eda" />
+
+
 ## **License**
 MIT License – fully open-source and open for ecosystem contributions.
