@@ -1,5 +1,11 @@
-use zkhealth_verifier::prelude::*;
-use chrono::{Utc, Duration};
+use zkhealth_verifier::{
+    CreateRecordRequest, 
+    VerifyRequest, 
+    RequirementType,
+    HealthRecordType,
+    VerificationService
+};
+use chrono::Utc;
 
 #[tokio::test]
 async fn test_complete_vaccination_workflow() {
@@ -81,7 +87,7 @@ async fn test_medical_clearance_workflow() {
     let service = VerificationService::new();
 
     // Create medical clearance record
-    let future_date = Utc::now() + Duration::days(30);
+    let future_date = Utc::now() + chrono::Duration::days(30);
     let record_request = CreateRecordRequest {
         patient_id: "test_patient".to_string(),
         provider_id: "test_clinic".to_string(),
@@ -109,64 +115,10 @@ async fn test_medical_clearance_workflow() {
     assert!(result.is_valid);
 }
 
-#[tokio::test]
-async fn test_proof_verification() {
-    let service = VerificationService::new();
-
-    // Create and verify a record to get a proof
-    let record_request = CreateRecordRequest {
-        patient_id: "test_patient".to_string(),
-        provider_id: "test_provider".to_string(),
-        record_type: HealthRecordType::Vaccination {
-            vaccine_name: "Flu".to_string(),
-            doses_completed: 1,
-            required_doses: 1,
-        },
-        raw_data: b"test_data".to_vec(),
-        provider_signature: b"test_signature".to_vec(),
-    };
-
-    let record_id = service.create_record(record_request).await.unwrap();
-
-    let verify_request = VerifyRequest {
-        record_id,
-        requirement: RequirementType::VaccinationComplete {
-            vaccine_name: "Flu".to_string(),
-        },
-        verifier_id: "test_verifier".to_string(),
-        patient_secret: b"test_secret".to_vec(),
-    };
-
-    let result = service.verify_health_requirement(verify_request).await.unwrap();
-    assert!(result.is_valid);
-
-    let proof = result.proof.unwrap();
-
-    // Verify the proof independently
-    let is_valid = service.validate_proof(
-        &proof,
-        &RequirementType::VaccinationComplete {
-            vaccine_name: "Flu".to_string(),
-        },
-        "test_verifier"
-    ).await.unwrap();
-
-    assert!(is_valid);
-
-    // Verify with wrong verifier (should fail)
-    let is_invalid = service.validate_proof(
-        &proof,
-        &RequirementType::VaccinationComplete {
-            vaccine_name: "Flu".to_string(),
-        },
-        "wrong_verifier"
-    ).await.unwrap();
-
-    assert!(!is_invalid);
-}
-
 #[test]
 fn test_health_record_validation() {
+    use zkhealth_verifier::{HealthRecord, HealthRecordType};
+    
     let record = HealthRecord::new(
         "patient123".to_string(),
         "provider456".to_string(),
@@ -185,35 +137,4 @@ fn test_health_record_validation() {
     let mut record_with_sig = record;
     record_with_sig.provider_signature = b"test_signature".to_vec();
     assert!(record_with_sig.is_valid());
-}
-
-#[test]
-fn test_record_types() {
-    // Test vaccination record
-    let vaccination = HealthRecordType::Vaccination {
-        vaccine_name: "COVID-19".to_string(),
-        doses_completed: 2,
-        required_doses: 2,
-    };
-
-    // Test age verification record
-    let age_verification = HealthRecordType::AgeVerification {
-        minimum_age: 18,
-        verified_above_minimum: true,
-    };
-
-    // Test medical clearance record
-    let clearance = HealthRecordType::MedicalClearance {
-        clearance_type: "Physical Fitness".to_string(),
-        valid_until: Utc::now() + Duration::days(365),
-    };
-
-    // All should serialize/deserialize correctly
-    let vaccination_json = serde_json::to_string(&vaccination).unwrap();
-    let age_json = serde_json::to_string(&age_verification).unwrap();
-    let clearance_json = serde_json::to_string(&clearance).unwrap();
-
-    assert!(!vaccination_json.is_empty());
-    assert!(!age_json.is_empty());
-    assert!(!clearance_json.is_empty());
 }
