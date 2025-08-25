@@ -1,0 +1,102 @@
+# vApp Submission: [crypto battle arena]
+
+## Verification
+```yaml
+github_username: "Ddm1234"
+discord_id: "868238528490909817"
+timestamp: "2025-08-25"
+```
+
+## Developer
+- **Name**: dharam makavana 
+- **GitHub**: Ddm1234
+- **Discord**: dharam_1998
+- **Experience**: learning python and GitHub 
+
+## Project
+
+### Name & Category
+- **Project**: crypto battle arena 
+- **Category**: gaming
+
+### Description
+
+Crypto Battle Arena is a decentralized battle game where players own characters as NFTs.
+Characters level up by spending cryptocurrency (ETH, SUI, or stablecoins).
+Higher levels → higher rarity, higher in-game value, and stronger stats.
+As they level up, characters unlock special abilities:
+Custom costumes (NFT skins)
+Weapon power-ups (stronger attacks, unique styles)
+Special abilities (rare skills only available at higher tiers)
+
+### SL Integration  
+Use Soundness Layer to verify battle results and randomness 
+Level-up actions create proofs stored in Walrus to ensure all progression is transparent.
+Cross-chain token support → players can spend ETH/SUI/USDC to upgrade
+
+## Technical
+
+### Architecture
+
+Frontend: Web-based battle arena for players to connect wallets and play.
+Game Engine: Web3-connected battle logic with ZK proofs for fairness.
+Smart Contracts: NFT ownership, leveling, ability unlocks, marketplace.
+Soundness Layer: Verifies proofs of battles, level-ups, and randomness.
+Storage: Walrus for battle records + IPFS for assets/costumes.
+
+### Stack
+- **Frontend**: React + Web3.js
+- **Backend**: Node.js
+- **Blockchain**: SL + sui + ethirium 
+- **Storage**: WALRUS,IPFS
+
+### Features
+1. Level-up with Crypto → pay tokens to upgrade your NFT character.
+2. ZK Battle Fairness → proofs for randomness & outcomes.
+3. Custom NFT Costumes & Weapons → unlocked as level increases.
+4. Marketplace → trade upgraded characters (rarer = more valuable).
+5. Cross-chain Support → ETH/SUI/USDC for upgrades.
+
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [ ] Basic NFT characters
+
+- [ ] Simple battle logic
+
+- [ ] Level-up mechanic with crypto payments
+
+- [ ] SL integration for fair randomness
+
+
+### MVP (4-8 weeks)  
+- [ ] Full battle system with abilities
+
+- [ ] NFT marketplace for trading leveled-up characters
+
+- [ ] Customization (costumes, weapons)
+
+- [ ] Full SL integration with Walrus storage
+
+- [ ] Player testing + feedback
+
+
+## Innovation
+Most blockchain games focus on collectibles but lack real progression systems.
+Crypto Battle Arena introduces:
+Crypto-powered progression (characters gain both power + value).
+ZK-verifiable fairness in battles.
+Player creativity → skins, weapons, abilities unlocked through leveling.
+
+
+## Contact
+twitter @coin78692
+discord @dharam_1998
+
+
+**Checklist before submitting:**
+- [x] All fields completed
+- [x] GitHub username matches PR author  
+- [x] SL integration explained
+- [x] Timeline is realistic
