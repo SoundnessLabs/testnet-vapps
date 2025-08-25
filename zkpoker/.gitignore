@@ -1,0 +1,36 @@
+# Rust
+/target/
+Cargo.lock
+*.pdb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Build artifacts
+dist/
+build/
+
+# Node.js (for frontend)
+node_modules/
+npm-debug.log*
+
+# Test artifacts
+coverage/
+*.profraw
