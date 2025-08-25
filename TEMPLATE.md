@@ -1,23 +1,23 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: [Lampung Social]
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "lampungnetworking"
+discord_id: "838337465353895937"
+timestamp: "2025-08-25"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
+- **Name**: Ardiansah
+- **GitHub**: @lampungnetworking
+- **Discord**: kmbr97#9911
 - **Experience**: Brief background
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: Lampung Social
+- **Category**: Social
 
 ### Description
 What problem does your vApp solve? What does it do?
