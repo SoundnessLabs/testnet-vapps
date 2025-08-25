@@ -3,7 +3,7 @@
 name = "zkhealth-verifier"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Discord: sabnzbd"]
 description = "Privacy-preserving healthcare verification using zero-knowledge proofs"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/SoundnessLabs/testnet-vapps"
