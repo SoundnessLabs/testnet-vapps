@@ -64,7 +64,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect();
         
         if let Some((player_id, player_name, _)) = table_players.first() {
-            let game_state = service.get_game_state(table_id, **player_id).await?;
+            let game_state = service.get_game_state(table_id, *player_id).await?;
             
             println!("     Current stage: {:?}", game_state.stage);
             println!("     Pot: {}", game_state.pot);
@@ -73,7 +73,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                 // Make a demonstration move
                 let action = if game_state.pot > 0 { "call" } else { "check" };
                 let action_request = ActionRequest {
-                    player_id: **player_id,
+                    player_id: *player_id,
                     game_id: table_id,
                     action: action.to_string(),
                     player_secret: None,

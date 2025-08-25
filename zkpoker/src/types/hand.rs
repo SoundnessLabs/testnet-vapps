@@ -1,8 +1,8 @@
-use crate::types::card::{Card, Rank, Suit};
+use crate::types::card::{Card, Rank};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
-#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Serialize, Deserialize)]
 pub enum HandRank {
     HighCard = 1,
     Pair = 2,

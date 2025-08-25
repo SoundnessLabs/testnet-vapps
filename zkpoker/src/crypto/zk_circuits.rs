@@ -46,6 +46,17 @@ pub enum ZkCircuitError {
     VerificationFailed,
 }
 
+impl From<ZkCircuitError> for String {
+    fn from(error: ZkCircuitError) -> Self {
+        match error {
+            ZkCircuitError::InvalidCards => "Invalid card combination".to_string(),
+            ZkCircuitError::CommitmentFailed => "Commitment verification failed".to_string(),
+            ZkCircuitError::ProofGenerationFailed(msg) => format!("Proof generation failed: {}", msg),
+            ZkCircuitError::VerificationFailed => "Proof verification failed".to_string(),
+        }
+    }
+}
+
 impl PokerZkCircuit {
     pub fn new(
         hole_cards: [Card; 2],

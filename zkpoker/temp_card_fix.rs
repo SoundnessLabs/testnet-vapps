@@ -109,4 +109,11 @@ mod tests {
         let two_hearts = Card::new(Suit::Hearts, Rank::Two);
         assert_eq!(two_hearts.to_string(), "2♥");
     }
+
+    #[test] 
+    fn test_rank_ordering() {
+        assert!(Rank::Ace > Rank::King);
+        assert!(Rank::King > Rank::Queen);
+        assert!(Rank::Two < Rank::Three);
+    }
 }
