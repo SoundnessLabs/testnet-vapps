@@ -70,7 +70,7 @@ Verification (No Private Data Exposed)
 
 ---
 
-## �� Use Cases  
+## 🚀 Use Cases  
 
 ### ✈️ Travel & Transportation  
 - Airlines: verify requirements without disclosing medical history  
