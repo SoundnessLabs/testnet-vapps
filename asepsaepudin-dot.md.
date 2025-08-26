@@ -1,0 +1,79 @@
+### vApp Submission: TrustVote
+
+#### Verification
+* **github_username**: "asepsaepudin-dot"
+* **discord_id**: "1269783096459399364"
+* **timestamp**: "2025-08-26"
+
+---
+
+#### Developer
+* **Name**: Asep Saepudin
+* **GitHub**: @asepsaepudin-dot
+* **Discord**: @baekjingan69
+* **Experience**: A software developer with a focus on web applications and blockchain technology.
+
+---
+
+#### Project
+* **Name & Category**
+    * **Project**: TrustVote
+    * **Category**: `social`
+
+* **Description**
+    * TrustVote is a decentralized voting platform designed to combat voting spam and manipulation. It requires a small crypto fee for every vote cast. This fee acts as an anti-spam mechanism, ensuring that each vote has an economic value and a sincere intent, which reduces the incentive for bots or Sybil attacks.
+
+---
+
+#### SL Integration
+* **How will you use the Soundness Layer?**
+    * TrustVote will leverage the Soundness Layer for on-chain verification of user identities and for transparently recording each vote. The SL will act as a trust layer ensuring that each vote originates from a verified user and that voting records are immutable.
+
+---
+
+#### Technical
+* **Architecture**
+    * The system will consist of a web frontend that interacts with a smart contract on the Soundness Layer. The smart contract will manage the creation of votes, vote recording, and fee collection. The frontend will use a wallet to connect users and submit transactions.
+
+* **Stack**
+    * **Frontend**: React
+    * **Backend**: No traditional backend, only smart contracts.
+    * **Blockchain**: SL + Sui
+    * **Storage**: Smart contracts for voting data.
+
+* **Features**
+    * Core Feature 1: Crypto Fee-Based Voting to prevent spam.
+    * Core Feature 2: Transparent and verifiable vote recording on the blockchain.
+    * Core Feature 3: An easy-to-use interface to create and participate in votes.
+
+---
+
+#### Timeline
+* **PoC (Proof of Concept) (2-4 weeks)**
+    * Basic functionality: a smart contract to create a vote and record votes with a fee.
+    * SL Integration: Basic verification testing.
+    * Simple UI: A basic web page for interaction.
+
+* **MVP (Minimum Viable Product) (4-8 weeks)**
+    * Full features: Implementation of all core features, including multiple vote types.
+    * Production ready: Security testing and smart contract optimization.
+    * User testing: Iterating based on early user feedback.
+
+---
+
+#### Innovation
+* TrustVote is unique because it solves the core problems of decentralized voting—spam and Sybil attacks—with an economic-based approach. It provides a more reliable solution for communities that require honest and accountable voting results.
+
+---
+
+#### Contact
+* **Preferred contact method**: Discord
+* **Where to share updates**: SoundnessLabs Discord channel
+
+---
+
+#### Pre-submission Checklist:
+* [ ] All fields have been filled out
+* [ ] GitHub username matches the PR author
+* [ ] SL integration is explained
+* [ ] The timeline is realistic
