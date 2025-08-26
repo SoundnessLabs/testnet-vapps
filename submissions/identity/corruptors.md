@@ -46,12 +46,12 @@ SL smart contracts coordinate identity verification across chains. ZK proofs ena
 ### PoC (3 weeks)
 - [x] SL identity contract
 - [x] Basic frontend
-- [ ] Cross-chain verification
+- [x] Cross-chain verification
 
 ### MVP (6 weeks)
-- [ ] Full verification system
+- [x] Full verification system
 - [ ] API for developers
-- [ ] Mobile support
+- [x] Mobile support
 
 ## Innovation
 First identity system using SL for true cross-chain coordination with privacy preservation.
