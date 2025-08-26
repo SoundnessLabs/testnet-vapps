@@ -55,14 +55,14 @@ The system will follow a standard decentralized application architecture:
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [x] Basic functionality
-- [x] SL integration
-- [x] Simple UI
+- [ ] Basic functionality
+- [ ] SL integration
+- [ ] Simple UI
 
 ### MVP (4-8 weeks)  
-- [x] Full features
-- [x] Production ready
-- [x] User testing
+- [ ] Full features
+- [ ] Production ready
+- [ ] User testing
 
 ## Innovation
 The innovation of this project lies in creating a formal, on-chain system for what is often an informal and unrewarded process: community contribution.
