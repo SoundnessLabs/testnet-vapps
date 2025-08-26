@@ -1,0 +1,72 @@
+# vApp Submission: [Your Project Name]
+
+## Verification
+```yaml
+github_username: "ibah11"
+discord_id: "837492098025521153"
+timestamp: "2025-08-26"
+```
+
+## Developer
+- **Name**: ibah11
+- **GitHub**: @ibah11
+- **Discord**: ibah11
+- **Experience**: Brief background
+
+## Project
+
+### Name & Category
+- **Project**: Pixel Quest RPG
+- **Category**: identity/gaming
+### Description
+- **Decentralized Leaderboard
+- **NFT Rewards
+- **Token Incentives
+- **Provably Fair Gameplay
+
+### SL Integration  
+How will you use Soundness Layer? What specific SL features? leaderboard, NFT, token
+
+## Technical
+
+### Architecture
+Client-side game with HTML5 Canvas for rendering, connected directly to Soundness Layer smart contracts for score storage and reward distribution. Frontend communicates directly with the blockchain through a wallet connector.
+
+### Stack
+Frontend: HTML5 Canvas + Vanilla JavaScript
+Backend: Soundness Layer Smart Contracts (Rust)
+Blockchain: Soundness Layer
+Storage: WALRUS (permanent score storage) + LocalStorage (client-side temporary data)
+
+### Features
+Simple click/tap balloon gameplay mechanics
+Decentralized leaderboard on the blockchain
+NFT achievement system for special accomplishments
+Token rewards for top players
+Multi-mode gameplay (Classic, Time Attack, Endless)
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [ ] Basic gameplay
+- [ ] Integrasi wallet connector SL
+- [ ] Simple UI with basic leaderboard
+
+### MVP (4-8 weeks)  
+- [ ] Full features with all gameplay modes
+- [ ] NFT minting system for achievements
+- [ ] oken distribution mechanism
+- [ ]Production-ready frontend
+- [ ]User testing and feedback collection
+## Innovation
+What makes this unique? Why will people use it? Instant Accessibility, True Ownership
+
+## Contact
+Preferred contact method and where you'll share updates.
+
+
+**Checklist before submitting:**
+- [ ] All fields completed
+- [ ] GitHub username matches PR author  
+- [ ] SL integration explained
+- [ ] Timeline is realistic
