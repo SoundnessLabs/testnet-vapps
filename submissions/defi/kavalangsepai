@@ -1,0 +1,195 @@
+# Private Multi‑Asset Swap (P‑MAS)
+
+**Category:** defi
+**Status:** Proposal (Testnet vApp)
+**Author:** \kavalangsepai
+**Discord:** \kavalangsepai
+
+---
+
+## 1) Summary
+
+P‑MAS is a privacy‑preserving swap protocol that lets two users trade multiple assets in a **single atomic swap** while revealing **no sensitive amounts** publicly. Users generate **client‑side ZK proofs** (Ligero) that attest to: (a) sufficient balances, (b) asset ownership, and (c) a fair price within user‑set slippage. Proof artifacts are uploaded to **Walrus** and **attested by Soundness Layer (SL)**, with **Sui** acting as the coordination layer. Matches are executed via an off‑chain order relay during testnet, with optional on‑chain settlement adapters.
+
+**Why now:** Soundness Layer enables fast, low‑friction proving + attestation that’s ideal for privacy DeFi prototypes.
+
+---
+
+## 2) Problem & Opportunity
+
+Public AMMs leak order size, intent, and execution, enabling MEV and deanonymization. OTC swaps avoid leakage but have poor trust guarantees. P‑MAS uses ZK proofs to keep orders private while preserving auditability and liveness via SL attestation.
+
+**Target users:** privacy‑minded traders, OTC desks on testnets, and developers exploring ZK‑powered finance.
+
+---
+
+## 3) What We’re Building (MVP Scope)
+
+* **Multi‑asset intents:** one order can request $Token A, Token B$ ↔ $Token C$ with specified min/max price bands.
+* **Private balances:** zero‑knowledge proofs of balance sufficiency and allowance—no raw balances onchain.
+* **Fair‑price guarantee:** a proof that executed price lies within user’s slippage bound.
+* **Atomicity:** either all legs fill or none (testnet atomic fill across matched intents).
+* **Attestation:** every proof gets **Walrus CID** + **SL attestation**; verifiers only accept attested orders.
+
+> **Note:** MVP focuses on **testnet tokens** and a centralized order relay for simplicity; proofs + attestations are the trust anchor. On‑chain settlement adapters are optional stretch goals.
+
+---
+
+## 4) Architecture & Flow
+
+### Components
+
+* **Frontend (Web):** React UI for composing orders, generating proofs, tracking fills.
+* **Wallet/Keys:** Sui wallet for identity + signing; P‑MAS keypair for proof commitments.
+* **Prover:** **Ligero** client‑side prover for fast balance/price proofs.
+* **Storage:** **Walrus** to persist proof blobs (CID returned to client).
+* **Attestation:** **Soundness Layer** attests proof validity (CID + metadata).
+* **Coordinator:** **Sui** for referencing attestations and publishing intent hashes.
+* **Order Relay (Testnet):** lightweight matching service (stateless; stores only CID, hashes, signatures).
+
+### Data Flow (Happy Path)
+
+1. User drafts **intent**: asset set, desired amounts, price bounds, expiry.
+2. Client computes **commitments** to balances & intents.
+3. Client generates **Ligero proofs** for: balance sufficiency, ownership, and fair‑price bound.
+4. Client uploads proof bundle to **Walrus** → receives **CID**.
+5. Client submits CID to **Soundness Layer** → receives **SL attestation handle**.
+6. Client posts **IntentRecord** to the **Relay**: `{ intentHash, walrusCID, slAttestation, signature }` and publishes an **IntentRef** to Sui (for discoverability & timestamping on testnet).
+7. Counterparty submits a compatible intent; Relay validates **SL attestation** & signatures; computes match.
+8. **Atomic fill:** both parties co‑sign a settlement instruction; either (a) off‑chain simulated settlement (MVP) or (b) on‑chain adapter (stretch) executes transfers; receipts reference CID + SL attestation.
+
+### Circuits (MVP)
+
+* **BalanceProof:** Pedersen commitments; proves `balance(token) ≥ spend + fee`.
+* **OwnershipProof:** proves control of the committed address set.
+* **PriceBoundProof:** proves executed price within `[limitMin, limitMax]` without revealing exact price.
+
+### Verifier Policy
+
+* Relay only accepts intents with valid **SL attestations** and non‑expired timestamps.
+* Double‑spend of commitments prevented via per‑intent nullifier inside proof.
+
+---
+
+## 5) User Stories
+
+* *As a trader*, aku bisa swap dua token sekaligus secara privat dengan batas slippage 1%.
+* *Sebagai OTC desk*, aku bisa memverifikasi lawan transaksi punya saldo cukup tanpa membocorkan nominal.
+* *Sebagai auditor testnet*, aku bisa menarik CID Walrus + SL attestation untuk meninjau bukti tanpa data mentah.
+
+---
+
+## 6) Milestones & Timeline (4–5 Weeks)
+
+**W1 – Foundations**
+
+* Scaffold React UI, wallet connect, schema `IntentRecord`
+* Implement Ligero setup + BalanceProof mock
+
+**W2 – Proofs & Storage**
+
+* Implement BalanceProof & OwnershipProof
+* Walrus upload + fetch; integrate **SL attestation**
+
+**W3 – Matching & PriceBound**
+
+* Implement PriceBoundProof
+* Build minimal order relay with attestation checks
+* Publish IntentRef to **Sui** for discoverability
+
+**W4 – Atomic Fill + UX**
+
+* Atomic co‑sign flow; receipts referencing CID + attestation
+* Leaderboard/analytics: matched volume, proof latency
+
+**Stretch (W5)**
+
+* On‑chain settlement adapter on Sui testnet
+* SP1 Groth16 verifier path for alternative circuits
+
+---
+
+## 7) Success Metrics
+
+* T ≥ 100 successful **attested swaps** on testnet
+* Median client‑side proving time ≤ **10s** for typical orders
+* ≥ **50 unique** wallets posting valid intents
+* Zero accepted intents without valid **SL attestation** (relay policy)
+
+---
+
+## 8) Risks & Mitigations
+
+* **Circuit soundness bugs:** start with narrowly scoped, audited patterns (range checks, commitments); add unit tests + adversarial inputs.
+* **Relay DoS/spam:** require signed intents, per‑IP rate limiting, and short expiries.
+* **Timing leaks:** batch relay validations and randomize processing.
+* **UX friction:** pre‑compute proving keys; progressive disclosure UI; clear status for Walrus/SL.
+
+---
+
+## 9) Open Source & License
+
+* Code under **MIT**.
+* Public repo with circuits, UI, relay, and integration docs.
+
+---
+
+## 10) Integration Plan with Soundness Layer (SL)
+
+* Use official **Soundness CLI** or SDK to submit proof CIDs to SL for attestation.
+* Store returned **attestation handle** alongside the CID in `IntentRecord`.
+* Expose `GET /intent/:hash` returning `{ cid, slAttestation, status }`.
+* Provide a verifier script that re‑downloads proof from Walrus and checks SL attestation.
+
+---
+
+## 11) Deliverables
+
+* **Web UI** for composing intents and generating proofs.
+* **Order Relay** (open‑source) with SL attestation checks.
+* **Circuits**: BalanceProof, OwnershipProof, PriceBoundProof.
+* **Docs**: runbook, API spec, and example flows.
+* **Demo video** (optional) showing end‑to‑end swap.
+
+---
+
+## 12) Team & Contact
+
+* **GitHub:** \kavalangsepai
+* **Discord:** \kavalangsepai
+
+---
+
+## 13) File Path for Submission
+
+Create this file at:
+`submissions/defi/<your‑github‑username>.md`
+
+---
+
+## 14) Appendix
+
+**IntentRecord (example)**
+
+```json
+{
+  "intentHash": "0x…",
+  "assetsOut": [{"token": "TKA", "amountCommit": "CmtA"},{"token": "TKB", "amountCommit": "CmtB"}],
+  "assetsIn": [{"token": "TKC", "amountCommit": "CmtC"}],
+  "priceBounds": {"min": "Cmin", "max": "Cmax"},
+  "proofCID": "walrus://bafy…",
+  "slAttestation": "sl://att-…",
+  "expiry": 172,
+  "nullifier": "Nul-…",
+  "signature": "sig(…)",
+  "publisher": "sui:0x…"
+}
+```
+
+**Verifier Checklist**
+
+* [ ] Walrus CID is retrievable
+* [ ] SL attestation is valid & unexpired
+* [ ] Intent not expired; nullifier unseen
+* [ ] Counterparty proofs present and match
+* [ ] Atomic co‑sign present before settlement
