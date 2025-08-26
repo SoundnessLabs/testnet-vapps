@@ -2,28 +2,28 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "NenengR"
+discord_id: "848078128123346945"
+timestamp: "2025-08-26"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: Walangsungsang
+- **GitHub**: @NenengR
+- **Discord**: nengRahma#2670
+- **Experience**: 4 years Web3, identity systems
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: CrossChain ID Verifier
+- **Category**: identity
 
 ### Description
-What problem does your vApp solve? What does it do?
+onchain Verify Solve
 
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+Onchain validity verifier
 
 ## Technical
 
@@ -33,7 +33,7 @@ High-level system design and approach
 ### Stack
 - **Frontend**: React/Vue/etc
 - **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
+- **Blockchain**: SL + SUI
 - **Storage**: Database/WALRUS/IPFS/etc
 
 ### Features
@@ -44,24 +44,24 @@ High-level system design and approach
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+- [true] Basic functionality
+- [true] SL integration
+- [true] Simple UI
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
+- [true] Full features
+- [true] Production ready
+- [true] User testing
 
 ## Innovation
-What makes this unique? Why will people use it?
+What makes this unique? Why will people use it? simple secure and fast 
 
 ## Contact
-Preferred contact method and where you'll share updates.
+Preferred contact method and where you'll share updates. on github
 
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [true] All fields completed
+- [true] GitHub username matches PR author  
+- [true] SL integration explained
+- [true] Timeline is realistic
