@@ -7,10 +7,10 @@ infrastructure
 zkProof-Visualizer
 
 ## Author
-@seu-github-username
+@MatheusSntsLopes
 
 ## Discord ID
-seu-discord-id
+820641826738405429
 
 ## Idea
 A vApp focused on **observability and monitoring** of zkProofs in the Soundness testnet.  
