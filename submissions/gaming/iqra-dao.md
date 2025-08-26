@@ -31,7 +31,7 @@ This demonstrates how zero-knowledge proofs can enable privacy-preserving gamepl
 
 ## Team
 - GitHub: [iqra-dao](https://github.com/iqra-dao)  
-- Discord ID: *(maakhadiza)*  
+- Discord ID: 709026184897232937  
 
 ## Future Scope
 - Multiplayer puzzle-based gaming with zk proofs  
