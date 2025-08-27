@@ -1,23 +1,23 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: [Bond]
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "xabit24"
+discord_id: "886948640495644672"
+timestamp: "2025-01-27"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
+- **Name**: maincore69
+- **GitHub**: @xabit24
+- **Discord**: maincore69
 - **Experience**: Brief background
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: Bond
+- **Category**: defi
 
 ### Description
 What problem does your vApp solve? What does it do?
