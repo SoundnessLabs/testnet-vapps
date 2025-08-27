@@ -1,0 +1,112 @@
+github_username: "lutfi008"
+discord_id: "1207178480949919765"
+timestamp: "2025-08-27"
+
+Developer
+
+Experience: Web3 Game Developer & NFT Enthusiast
+
+Project
+
+Name & Category
+
+Project: zkArena Quest
+
+Category: Gaming / NFT / Entertainment
+
+Description
+
+zkArena Quest is a Game + NFT Entertainment platform that combines mini-game tournament elements with character and item NFTs.
+Players can compete in web-based games, collect exclusive NFTs, and exchange rewards across chains.
+The Soundness Layer is used to:
+
+Verify game scores with Zero-Knowledge Proofs to prevent cheating.
+
+Ensure transparent distribution of NFT/token rewards while maintaining player data privacy.
+
+SL Integration
+
+The game client sends match results to the backend, where the backend generates a zk-proof of valid results.
+
+Proof is verified by a smart contract on the Soundness Layer + Sui to determine rewards.
+
+Only proofs are stored on-chain (not full score details) → privacy + gas savings.
+
+NFTs drop directly on-chain based on valid results.
+
+Technical
+
+Architecture
+
+Frontend (Game Client): React + Phaser.js (web game)
+Backend: Node.js (verify score results & generate zk-proof)
+Blockchain: Sui + Soundness Layer
+NFT: Characters, skins, items (Mint via smart contract after proof is valid)
+
+Flow:
+
+1. Player plays → score results
+
+2. Backend calculates score & generates zk-proof of validity
+
+3. Proof is sent to smart contract
+
+4. Contract verifies proof via Soundness Layer
+
+5. If valid → player receives NFT/reward
+
+Stack
+
+Frontend: React + Phaser.js
+
+Backend: Node.js, zkVM (Soundness)
+
+Blockchain: Sui + Soundness Layer
+
+NFT: Sui-native collectibles
+
+Features
+
+1. Character NFTs with unique attributes (upgradable).
+
+2. PvP/PvE mini-games with a zk-verified leaderboard.
+
+3. NFT rewards + on-chain tokens.
+
+4. Cross-chain NFT tradability.
+
+Timeline
+
+PoC (2–4 weeks)
+
+[ ] Simple web mini-game + wallet connection.
+
+[ ] Soundness Layer integration for score verification.
+
+[ ] Mint NFT rewards after verification.
+
+MVP (4–8 weeks)
+
+[ ] Multiple game modes (PvP + PvE).
+
+[ ] In-app NFT marketplace.
+
+[ ] Zk-verified leaderboard.
+
+[ ] Cross-chain NFT support.
+
+Innovation
+
+zkArena Quest brings the "Play, Verify, Earn" concept to the world of NFT gaming.
+With the Soundness Layer, game scores and results can be verified without cheating, making the competition fairer, more transparent, and still fun.
+
+Contact
+
+Discord: lutfimee / 1207178480949919765
+
+GitHub: lutfi008
+Email: lutfirianasetiadi008@gmail.con
+
+
+
+---
