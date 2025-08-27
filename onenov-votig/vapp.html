@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneNov Voting dApp (PoC)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #58a6ff;
+      --primary-dark: #388bfd;
+      --success: #238636;
+      --success-hover: #2ea043;
+      --danger: #da3633;
+      --danger-hover: #f85149;
+      --bg-primary: #0d1117;
+      --bg-secondary: #161b22;
+      --bg-card: #0d1117;
+      --text-primary: #e6edf3;
+      --text-secondary: #c9d1d9;
+      --text-muted: #8b949e;
+      --border: #30363d;
+      --accent: #6e44ff;
+      --accent-glow: 0 0 10px rgba(110, 68, 255, 0.7);
+      --neon-glow: 0 0 15px rgba(88, 166, 255, 0.7);
+      --warning: #d29922;
+      --warning-hover: #e3b341;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-primary);
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(31, 111, 235, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 85% 30%, rgba(110, 68, 255, 0.1) 0%, transparent 20%);
+      color: var(--text-primary);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 95%;
+      max-width: 1100px;
+      background-color: var(--bg-secondary);
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      margin: 2rem 0;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      box-shadow: var(--neon-glow);
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.5);
+      border: 2px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+    
+    .logo:hover {
+      transform: rotate(5deg);
+      box-shadow: var(--neon-glow);
+    }
+    
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .app-title {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    h1 {
+      color: var(--primary);
+      font-size: 1.8rem;
+      margin: 0;
+      text-shadow: 0 0 5px rgba(88, 166, 255, 0.5);
+    }
+    
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+    
+    .wallet-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .wallet-connect {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(145deg, #1a2c4d, #0d1726);
+      border: 1px solid var(--primary);
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      color: var(--text-primary);
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(31, 111, 235, 0.3);
+    }
+    
+    .wallet-connect:hover {
+      box-shadow: var(--neon-glow);
+      transform: translateY(-2px);
+    }
+    
+    .wallet-connect.connected {
+      background: linear-gradient(145deg, #1a4d38, #0d261a);
+      border-color: var(--success);
+    }
+    
+    .network-badge {
+      background-color: var(--accent);
+      border-radius: 8px;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.7rem;
+      margin-left: 0.5rem;
+    }
+    
+    .wallet-info {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 0.9rem;
+    }
+    
+    .wallet-address {
+      background: var(--bg-card);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      font-family: monospace;
+      margin-bottom: 0.5rem;
+    }
+    
+    .wallet-balance {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+    
+    .notification-bell {
+      position: relative;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    
+    .notification-bell:hover {
+      color: var(--primary);
+      background: rgba(88, 166, 255, 0.1);
+    }
+    
+    .notification-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--danger);
+      color: white;
+      font-size: 0.6rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    h2, h3 {
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      text-shadow: 0 0 5px rgba(88, 166, 255, 0.3);
+    }
+    
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    
+    .stats-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .stats-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+    
+    .stats-value {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin: 0.5rem 0;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .stats-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--text-secondary);
+    }
+    
+    input, textarea, select, button {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    input, textarea, select {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+      padding-left: 1rem;
+    }
+    
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(88, 166, 255, 0.3);
+    }
+    
+    button {
+      background: var(--success);
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    button::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0)
+      );
+      transform: rotate(30deg);
+      transition: all 0.3s;
+    }
+    
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    button:hover::after {
+      transform: rotate(30deg) translate(10%, 10%);
+    }
+    
+    .proposal-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .proposal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--primary), transparent);
+      opacity: 0.7;
+    }
+    
+    .proposal-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+    
+    .proposal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+    
+    .proposal-id {
+      background: var(--accent);
+      color: white;
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+    
+    .proposal-status {
+      font-size: 0.8rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      background: var(--bg-primary);
+    }
+    
+    .status-active {
+      background: var(--success);
+      color: white;
+    }
+    
+    .status-pending {
+      background: var(--warning);
+      color: black;
+    }
+    
+    .status-closed {
+      background: var(--danger);
+      color: white;
+    }
+    
+    .proposal-card h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .proposal-card h3 i {
+      color: var(--accent);
+    }
+    
+    .proposal-meta {
+      display: flex;
+      gap: 1rem;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    .proposal-meta div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .vote-btns {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .yes-btn { 
+      background: var(--primary);
+    }
+    
+    .no-btn { 
+      background: var(--danger);
+    }
+    
+    .abstain-btn {
+      background: var(--warning);
+    }
+    
+    .yes-btn:hover { 
+      background: var(--primary-dark);
+    }
+    
+    .no-btn:hover { 
+      background: var(--danger-hover);
+    }
+    
+    .abstain-btn:hover {
+      background: var(--warning-hover);
+    }
+    
+    .proofs {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 12px;
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-x: auto;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    
+    .proofs::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .proofs::-webkit-scrollbar-track {
+      background: var(--bg-primary);
+      border-radius: 4px;
+    }
+    
+    .proofs::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 4px;
+    }
+    
+    .tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+    }
+    
+    .tab {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .tab.active {
+      background: rgba(88, 166, 255, 0.2);
+      color: var(--primary);
+    }
+    
+    .tab:hover:not(.active) {
+      background: rgba(88, 166, 255, 0.1);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .social-links a {
+      color: var(--text-muted);
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      color: var(--primary);
+      transform: translateY(-2px);
+    }
+    
+    .footer-text a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+    
+    hr {
+      margin: 2rem 0;
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--border), transparent);
+    }
+    
+    .progress-bar {
+      height: 8px;
+      background-color: var(--bg-primary);
+      border-radius: 4px;
+      margin: 0.5rem 0;
+      overflow: hidden;
+    }
+    
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: linear-gradient(to right, var(--primary), var(--accent));
+      box-shadow: 0 0 10px rgba(88, 166, 255, 0.5);
+      transition: width 0.5s ease;
+    }
+    
+    .chart-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .chart {
+      height: 200px;
+      display: flex;
+      align-items: flex-end;
+      gap: 0.5rem;
+      padding: 1rem;
+    }
+    
+    .chart-bar {
+      flex: 1;
+      background: linear-gradient(to top, var(--primary), var(--accent));
+      border-radius: 4px 4px 0 0;
+      position: relative;
+      transition: height 0.5s ease;
+    }
+    
+    .chart-label {
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    
+    .chart-value {
+      position: absolute;
+      top: -25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(88, 166, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(88, 166, 255, 0); }
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+      border-radius: 50%;
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .modal-content {
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      padding: 2rem;
+      width: 90%;
+      max-width: 500px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .close-modal {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+      width: auto;
+    }
+    
+    .close-modal:hover {
+      color: var(--text-primary);
+    }
+    
+    @media (max-width: 968px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+      
+      .logo-container {
+        justify-content: center;
+      }
+      
+      .wallet-section {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .wallet-info {
+        align-items: center;
+      }
+      
+      .vote-btns {
+        flex-direction: column;
+      }
+      
+      .proposal-header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .proposal-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .footer {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="https://avatars.githubusercontent.com/u/176530267?s=200&v=4" alt="Soundness Labs Logo">
+        </div>
+        <div class="app-title">
+          <h1>OneNov Voting dApp</h1>
+          <span class="subtitle">Verifiable & privacy-preserving voting powered by <strong>Soundness Layer</strong></span>
+        </div>
+      </div>
+      <div class="wallet-section">
+        <div class="wallet-info" id="walletInfo">
+          <div class="wallet-address" id="walletAddress">0x742d...35f9</div>
+          <div class="wallet-balance">Balance: <span id="walletBalance">120.5 SUI</span></div>
+        </div>
+        <div class="notification-bell">
+          <i class="fas fa-bell"></i>
+          <span class="notification-badge">3</span>
+        </div>
+        <div class="wallet-connect" id="walletConnect">
+          <i class="fas fa-wallet"></i>
+          Connect Wallet
+          <span class="network-badge">Sui Testnet</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="dashboard">
+      <div class="stats-card">
+        <h3><i class="fas fa-chart-pie"></i> Total Proposals</h3>
+        <div class="stats-value" id="totalProposals">12</div>
+        <div class="stats-label">Across all categories</div>
+      </div>
+      <div class="stats-card">
+        <h3><i class="fas fa-users"></i> Total Voters</h3>
+        <div class="stats-value" id="totalVoters">384</div>
+        <div class="stats-label">Participated in voting</div>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="create">Create Proposal</div>
+      <div class="tab" data-tab="proposals">Active Proposals</div>
+      <div class="tab" data-tab="results">Voting Results</div>
+      <div class="tab" data-tab="proofs">Proof Data</div>
+    </div>
+
+    <div class="tab-content active" id="createTab">
+      <section id="create-proposal">
+        <h2><i class="fas fa-plus-circle"></i> Create Proposal</h2>
+        <div class="form-group">
+          <label for="title">Proposal Title</label>
+          <input type="text" id="title" placeholder="e.g., Upgrade Soundness Node">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="3" placeholder="Enter proposal details..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="protocol">Protocol Upgrade</option>
+            <option value="funding">Funding Request</option>
+            <option value="governance">Governance</option>
+            <option value="partnership">Partnership</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="duration">Voting Duration (Days)</label>
+          <input type="number" id="duration" min="1" max="30" value="7">
+        </div>
+        <button onclick="createProposal()">
+          <i class="fas fa-paper-plane"></i> Submit Proposal
+        </button>
+      </section>
+    </div>
+
+    <div class="tab-content" id="proposalsTab">
+      <section id="proposals">
+        <h2><i class="fas fa-chart-bar"></i> Active Proposals</h2>
+        <div id="proposal-list"></div>
+      </section>
+    </div>
+
+    <div class="tab-content" id="resultsTab">
+      <section id="results">
+        <h2><i class="fas fa-poll"></i> Voting Results</h2>
+        <div class="chart-container">
+          <h3>Proposal Voting Distribution</h3>
+          <div class="chart" id="resultsChart">
+            <div class="chart-bar" style="height: 75%">
+              <span class="chart-value">75%</span>
+              <span class="chart-label">Yes</span>
+            </div>
+            <div class="chart-bar" style="height: 20%">
+              <span class="chart-value">20%</span>
+              <span class="chart-label">No</span>
+            </div>
+            <div class="chart-bar" style="height: 5%">
+              <span class="chart-value">5%</span>
+              <span class="chart-label">Abstain</span>
+            </div>
+          </div>
+        </div>
+        <div id="results-list"></div>
+      </section>
+    </div>
+
+    <div class="tab-content" id="proofsTab">
+      <section>
+        <h2><i class="fas fa-shield-alt"></i> Proof Payloads (Mock)</h2>
+        <div class="proofs" id="proofs"></div>
+        <button onclick="exportData()" style="margin-top:1rem; background:var(--primary)">
+          <i class="fas fa-download"></i> Export JSON
+        </button>
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="footer-text">
+        Built by <a href="https://onenov.xyz" target="_blank">OneNov</a> | Powered by <a href="https://soundness.xyz" target="_blank">Soundness Labs</a>
+      </div>
+      <div class="social-links">
+        <a href="https://soundness.xyz/" target="_blank" title="Home"><i class="fas fa-home"></i></a>
+        <a href="https://soundness.xyz/blog" target="_blank" title="Blog"><i class="fas fa-blog"></i></a>
+        <a href="https://x.com/SoundnessLabs" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://discord.gg/SoundnessLabs" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+        <a href="https://t.me/SoundnessLabs" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+        <a href="https://github.com/SoundnessLabs" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="walletModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Connect Wallet</h2>
+        <button class="close-modal">&times;</button>
+      </div>
+      <div class="wallet-options">
+        <button style="margin-bottom: 1rem;">
+          <i class="fas fa-plug"></i> Sui Wallet
+        </button>
+        <button style="margin-bottom: 1rem; background: #f6851b;">
+          <i class="fab fa-ethereum"></i> MetaMask
+        </button>
+        <button style="background: var(--text-muted);">
+          <i class="fas fa-times"></i> Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State management
+    let proposals = JSON.parse(localStorage.getItem('proposals') || '[]');
+    let proofs = JSON.parse(localStorage.getItem('proofs') || '[]');
+    let activeAccount = null;
+    let connected = false;
+
+    // DOM elements
+    const walletConnect = document.getElementById('walletConnect');
+    const walletInfo = document.getElementById('walletInfo');
+    const walletAddress = document.getElementById('walletAddress');
+    const walletBalance = document.getElementById('walletBalance');
+    const walletModal = document.getElementById('walletModal');
+    const totalProposals = document.getElementById('totalProposals');
+    const totalVoters = document.getElementById('totalVoters');
+    const tabs = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+    const closeModal = document.querySelector('.close-modal');
+
+    // Initialize
+    function init() {
+      renderProposals();
+      updateStats();
+      setupEventListeners();
+    }
+
+    // Set up event listeners
+    function setupEventListeners() {
+      // Wallet connection
+      walletConnect.addEventListener('click', () => {
+        if (connected) {
+          disconnectWallet();
+        } else {
+          walletModal.style.display = 'flex';
+        }
+      });
+
+      // Close modal
+      closeModal.addEventListener('click', () => {
+        walletModal.style.display = 'none';
+      });
+
+      // Tab switching
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          const tabId = tab.getAttribute('data-tab');
+          
+          // Update active tab
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          
+          // Show corresponding content
+          tabContents.forEach(content => {
+            content.classList.remove('active');
+            if (content.id === `${tabId}Tab`) {
+              content.classList.add('active');
+            }
+          });
+        });
+      });
+
+      // Close modal if clicked outside
+      window.addEventListener('click', (e) => {
+        if (e.target === walletModal) {
+          walletModal.style.display = 'none';
+        }
+      });
+    }
+
+    // Connect wallet (mock)
+    function connectWallet() {
+      // Simulate wallet connection
+      activeAccount = '0x742d35f9a0a3c1b7d34c07c4c4d4d4d4d4d4d35f9';
+      const balance = (Math.random() * 1000).toFixed(2);
+      
+      // Update UI
+      walletAddress.textContent = `${activeAccount.substring(0, 6)}...${activeAccount.substring(activeAccount.length - 4)}`;
+      walletBalance.textContent = `${balance} SUI`;
+      walletInfo.style.display = 'flex';
+      walletConnect.innerHTML = '<i class="fas fa-check-circle"></i> Connected <span class="network-badge">Sui Testnet</span>';
+      walletConnect.classList.add('connected');
+      connected = true;
+      
+      // Close modal
+      walletModal.style.display = 'none';
+      
+      // Show notification
+      showNotification('Wallet connected successfully!');
+    }
+
+    // Disconnect wallet
+    function disconnectWallet() {
+      activeAccount = null;
+      walletInfo.style.display = 'none';
+      walletConnect.innerHTML = '<i class="fas fa-wallet"></i> Connect Wallet <span class="network-badge">Sui Testnet</span>';
+      walletConnect.classList.remove('connected');
+      connected = false;
+      
+      // Show notification
+      showNotification('Wallet disconnected.');
+    }
+
+    // Show notification
+    function showNotification(message) {
+      // In a real app, you would use a proper notification system
+      alert(`Notification: ${message}`);
+    }
+
+    // Save data to localStorage
+    function saveData() {
+      localStorage.setItem('proposals', JSON.stringify(proposals));
+      localStorage.setItem('proofs', JSON.stringify(proofs));
+    }
+
+    // Update statistics
+    function updateStats() {
+      totalProposals.textContent = proposals.length;
+      
+      // Calculate total voters
+      const voters = new Set();
+      proposals.forEach(p => {
+        p.voters.forEach(v => voters.add(v));
+      });
+      totalVoters.textContent = voters.size;
+    }
+
+    // Render proposals
+    function renderProposals() {
+      const container = document.getElementById('proposal-list');
+      container.innerHTML = '';
+      
+      if (proposals.length === 0) {
+        container.innerHTML = `
+          <div class="proposal-card">
+            <h3><i class="fas fa-info-circle"></i> No Proposals Yet</h3>
+            <p>Create the first proposal to get started with voting.</p>
+          </div>
+        `;
+        return;
+      }
+      
+      proposals.forEach((p, i) => {
+        const totalVotes = p.yes + p.no + (p.abstain || 0);
+        const yesPercentage = totalVotes > 0 ? (p.yes / totalVotes) * 100 : 0;
+        const noPercentage = totalVotes > 0 ? (p.no / totalVotes) * 100 : 0;
+        const abstainPercentage = totalVotes > 0 ? ((p.abstain || 0) / totalVotes) * 100 : 0;
+        
+        // Determine status
+        let status = 'active';
+        let statusText = 'Active';
+        if (yesPercentage > 66) {
+          status = 'passed';
+          statusText = 'Passed';
+        } else if (noPercentage > 50) {
+          status = 'rejected';
+          statusText = 'Rejected';
+        }
+        
+        const card = document.createElement('div');
+        card.className = 'proposal-card';
+        card.innerHTML = `
+          <div class="proposal-header">
+            <div class="proposal-id">#${i + 1}</div>
+            <div class="proposal-status status-${status}">${statusText}</div>
+          </div>
+          <h3><i class="fas fa-vote-yea"></i> ${p.title}</h3>
+          <p>${p.description}</p>
+          <div class="proposal-meta">
+            <div><i class="fas fa-layer-group"></i> ${p.category || 'General'}</div>
+            <div><i class="fas fa-clock"></i> Ends in ${p.duration || 7} days</div>
+            <div><i class="fas fa-users"></i> ${totalVotes} votes</div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: ${yesPercentage}%"></div>
+          </div>
+          <p><strong>Yes:</strong> ${p.yes} (${yesPercentage.toFixed(1)}%) | <strong>No:</strong> ${p.no} (${noPercentage.toFixed(1)}%)${p.abstain ? ` | <strong>Abstain:</strong> ${p.abstain} (${abstainPercentage.toFixed(1)}%)` : ''}</p>
+          <div class="vote-btns">
+            <button class="yes-btn" onclick="vote(${i}, 'yes')"><i class="fas fa-thumbs-up"></i> Vote Yes</button>
+            <button class="no-btn" onclick="vote(${i}, 'no')"><i class="fas fa-thumbs-down"></i> Vote No</button>
+            <button class="abstain-btn" onclick="vote(${i}, 'abstain')"><i class="fas fa-minus-circle"></i> Abstain</button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+      document.getElementById('proofs').textContent = JSON.stringify(proofs, null, 2);
+    }
+
+    // Create a new proposal
+    function createProposal() {
+      if (!connected) {
+        alert('Please connect your wallet first!');
+        return;
+      }
+      
+      const title = document.getElementById('title').value;
+      const description = document.getElementById('description').value;
+      const category = document.getElementById('category').value;
+      const duration = document.getElementById('duration').value;
+      
+      if (!title || !description) return alert('Please fill all fields');
+      
+      proposals.push({ 
+        title, 
+        description, 
+        category,
+        duration,
+        yes: 0, 
+        no: 0, 
+        abstain: 0,
+        voters: [] 
+      });
+      
+      saveData();
+      renderProposals();
+      updateStats();
+      
+      document.getElementById('title').value = '';
+      document.getElementById('description').value = '';
+      
+      // Show notification
+      showNotification('Proposal created successfully!');
+    }
+
+    // Vote on a proposal
+    function vote(index, choice) {
+      if (!connected) {
+        alert('Please connect your wallet first!');
+        return;
+      }
+      
+      if (proposals[index].voters.includes(activeAccount)) {
+        return alert('You already voted on this proposal!');
+      }
+      
+      proposals[index][choice]++;
+      proposals[index].voters.push(activeAccount);
+
+      const proof = {
+        proposal: proposals[index].title,
+        voter: activeAccount,
+        choice,
+        timestamp: Date.now(),
+        hash: sha256(JSON.stringify({user: activeAccount, choice, t: Date.now()}))
+      };
+      proofs.push(proof);
+
+      saveData();
+      renderProposals();
+      updateStats();
+      
+      // Show notification
+      showNotification(`Vote ${choice} recorded for proposal "${proposals[index].title}"`);
+    }
+
+    // Export data
+    function exportData() {
+      const blob = new Blob([JSON.stringify({proposals, proofs}, null, 2)], {type: 'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'voting-data.json';
+      a.click();
+    }
+
+    // SHA256 hash function
+    async function sha256(message) {
+      const msgBuffer = new TextEncoder().encode(message);
+      const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+      const hashArray = Array.from(new Uint8Array(hashBuffer));
+      return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    // Mock wallet connection for demo purposes
+    document.querySelectorAll('.wallet-options button').forEach((button, index) => {
+      if (index < 2) { // First two buttons are wallet connections
+        button.addEventListener('click', connectWallet);
+      } else {
+        button.addEventListener('click', () => {
+          walletModal.style.display = 'none';
+        });
+      }
+    });
+
+    // Initialize the application
+    init();
+  </script>
+</body>
+</html>
