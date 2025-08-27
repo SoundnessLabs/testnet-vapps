@@ -1,5 +1,5 @@
 github_username: "lutpi22"
-discord_id: "luffy"
+discord_id: " 916094413996965918"
 timestamp: "2025-08-26"
 
 ### Developer ###
@@ -27,16 +27,19 @@ The ZK-Proof is sent to OxyPriva’s Discord bot.
 The bot grants the appropriate role automatically.
 
 ### 2. Data Privacy
+
 Wallet addresses are never stored or revealed.
 Only the proof is passed to Discord, ensuring identity and financial activity remain separate.
 
 ### 3. Benefits of SL Integration
+
 Privacy: Wallet details are never shared.
 Security: Proofs prevent fraudulent role claims.
 Transparency: Anyone can verify the proof without accessing sensitive user data.
 Simplicity: One-click verification with automated Discord role assignment.
 
 ### Technical architecture ###
+
 # Medium-level system design:
 Frontend: User-facing dApp for wallet connection & proof generation.
 Backend: Proof verification & integration service.
@@ -44,6 +47,7 @@ Discord Bot: Grants roles based on valid proofs.
 Blockchain + SL: Provides proof verification without exposing wallet data.
 
 ### Stack ###
+
 Frontend: React / Next.js
 Backend: Node.js / Python
 Blockchain: Ethereum + Soundness Layer (SL)
@@ -57,6 +61,7 @@ Zero-Knowledge Proofs: SL ensures mathematical proof of ownership & authenticity
 Multi-Asset Support: NFTs, tokens, or passes can all be verified
 
 ### Innovation ###
+
 OxyPriva is unique because it blends Web3 privacy tech (ZK-Proofs) with community engagement tools (Discord roles).
 Unlike current solutions that force users to publicly link their wallet to Discord, OxyPriva keeps financial identity completely private while still delivering verifiable exclusivity.
 Why people will use it:
