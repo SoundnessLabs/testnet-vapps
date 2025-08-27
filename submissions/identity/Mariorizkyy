@@ -1,0 +1,75 @@
+# vApp Submission: [VeriChain ID]
+
+## Verification
+```yaml
+github_username: "Mariorizkyy"
+discord_id: "1144580237670228109"
+timestamp: "2025-08-27"
+```
+
+## Developer
+- **Name**: Mario 
+- **GitHub**: @Mariorizkyy
+- **Discord**: Markisa0792
+- **Experience**: Full-stack developer with 3 years building Web3 dApps and integrating L1/L2 solutions. Previously contributed to NFT marketplace projects and DeFi protocol dashboards.
+
+## Project
+
+### Name & Category
+- **Project**: VeriChain ID
+- **Category**: identity
+
+### Description
+VeriChain ID solves the problem of fragmented online identity. Users currently manage multiple wallets, social accounts, and verifications separately. Our vApp creates a unified on-chain identity that is portable across apps, giving users verifiable reputation and privacy controls.
+
+### SL Integration  
+Zero-knowledge verification to prove user attributes without revealing private data.
+
+SL attestations to bind wallet addresses to on-chain credentials.
+
+Secure messaging API to allow dApps to confirm user authenticity in real time.
+## Technical
+
+### Architecture
+Client-side dApp connects to SL for ZK proofs.
+
+Backend service issues and verifies attestations.
+
+Smart contracts manage identity credentials and revocation logic.
+
+### Stack
+- **Frontend**: React + Next.js
+- **Backend**: Node.js + Express 
+- **Blockchain**: Soundness Layer + Ethereum (for interoperability)
+- **Storage**: WALRUS for off-chain data, IPFS for public metadata
+
+### Features
+1. Core feature 1 Portable on-chain identity with SL attestations
+2. Core feature 2 Privacy-preserving reputation scores using ZK proofs
+3. Core feature 3 API for dApps to request and verify credentials instantly
+
+## Timeline
+
+### PoC (2-4 weeks)
+- Implement basic SL credential issuance and wallet binding
+- Simple React UI for identity registration
+- Demo with one verification flow
+
+### MVP (4-8 weeks)  
+- Add full feature set (reputation scoring + dApp verification API)
+- SL integration hardened for production
+- User testing with selected partners
+
+## Innovation
+Unlike other identity projects, VeriChain ID combines verifiable reputation + privacy control using SL’s zero-knowledge toolkit. Users can prove they are trustworthy without revealing personal details, making adoption easier for social dApps, DeFi protocols, and DAOs.
+
+## Contact
+Preferred contact: Discord (Markisa0792)
+Updates: Project GitHub repo + Discord dev log channel
+
+
+**Checklist before submitting:**
+- [ x] All fields completed
+- [ x] GitHub username matches PR author  
+- [x ] SL integration explained
+- [ x] Timeline is realistic
