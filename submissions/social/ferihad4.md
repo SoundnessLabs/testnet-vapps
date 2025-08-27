@@ -1,4 +1,4 @@
-# vApp Submission: [SoundChat]
+# vApp Submission: SoundChat
 
 ## Verification
 ```yaml
