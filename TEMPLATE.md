@@ -2,66 +2,87 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "ELANARCY"
+discord_id: "397046285770686503"
+timestamp: "2025-08-27"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: Syahvril Aditiya
+- **GitHub**: @Elanarcy
+- **Discord**: Elanarcy
+- **Experience**: im experienced developer such language python , node js , php , solidity , move .
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: BestieBot ai assistant
+- **Category**: Ai infrastructure
 
 ### Description
-What problem does your vApp solve? What does it do?
+BestieBot is an AI-powered chatbot infrastructure similar to ChatGPT but integrated with blockchain , designed to provide conversational assistance with a focus on user-friendly, scalable, and secure interactions. It solves the problem of accessible, customizable AI assistance for individuals and businesses, enabling seamless communication, task automation, and data processing.
+
+
 
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+BestieBot will leverage Soundness Layer (SL) for decentralized data integrity and secure transaction processing. Specific SL features include:SL Smart Contracts: For managing user interactions and subscription-based access securely.
+SL Data Verification: Ensuring the integrity of user inputs and AI outputs.
+SL Identity: For secure user authentication and privacy-preserving interactions.
+
+
 
 ## Technical
 
 ### Architecture
-High-level system design and approach
+BestieBot uses a modular architecture with a frontend for user interaction, a backend for AI processing, and SL for decentralized trust. The system integrates a large language model (LLM) for natural language processing, hosted on a scalable cloud infrastructure, with SL handling blockchain-based operations.
+
+
 
 ### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
+Frontend: React (for responsive, interactive UI)
+Backend: Python (for AI model integration) and Node.js (for API services)
+Blockchain: Soundness Layer (SL) for decentralized operations
+Storage: IPFS , mongodb for decentralized storage of conversation logs.
+
+
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+1.Conversational AI: Advanced natural language understanding for human-like interactions.
+2.Powerfull model Responses integrated with api open ai .
+3.Decentralized Security: SL ensures secure, tamper-proof data handling and user authentication.
+
+
 
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+-Basic chatbot functionality with pre-trained LLM
+-SL smart contract integration for user authentication
+-Simple React-based UI for testing
+
+
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
+-Full conversational features with domain customization
+-Production-ready SL integration for secure transactions
+-User testing with beta group for feedback
+
+
 
 ## Innovation
-What makes this unique? Why will people use it?
+BestieBot stands out by combining advanced AI with Soundness Layer’s decentralized trust, offering a secure, scalable, and customizable alternative to centralized chatbots. Its ability to integrate with domain-specific knowledge bases and ensure data privacy via SL makes it ideal for businesses and privacy-conscious users.
+
+
 
 ## Contact
-Preferred contact method and where you'll share updates.
+Preferred Contact: Discord (Elanarcy)
+telegram : @ravue
+Updates: Shared via GitHub repository (github.com/ELANARCY/BestieBot) and Discord community channel.
+
 
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [done] All fields completed
+- [done] GitHub username matches PR author  
+- [done] SL integration explained
+- [done] Timeline is realistic
