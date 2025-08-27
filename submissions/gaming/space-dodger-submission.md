@@ -28,7 +28,7 @@ Space Dodger Game is a mini arcade game where players control a spaceship to dod
   - Enabling decentralized leaderboard.  
 
 ## Technical
-### Architecture
+### Architecture      
 - Frontend: React-based game running in-browser.  
 - Backend: Node.js API connecting to blockchain.  
 - Blockchain: Soundness Layer + EVM testnet.  
