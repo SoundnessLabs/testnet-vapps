@@ -8,7 +8,7 @@ timestamp: "2025-01-15"
 ```
 
 ## Developer
-- **Name**: gusi
+- **Name**: gusioblag
 - **GitHub**: @gusiolala
 - **Discord**: Gusioblag
 - **Experience**: web3 explorer
