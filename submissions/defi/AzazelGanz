@@ -1,0 +1,55 @@
+github_username: "AzazelShadowlsky"
+discord_id: "852922794428858368"
+timestamp: "2025-08-27"
+
+# vApp Proposal - SmoothDeFiApp
+
+## Project Name
+SmoothDeFiApp
+
+## Category
+DeFi
+
+## Team / Author
+- GitHub: @AzazelShadowlsky
+- Discord: AzazelGanz
+
+## Short Description
+A simple decentralized app that helps people swap tokens with super low fees and a clean UI.  
+Think of it like a mini Uniswap, but easier to use for beginners.
+
+## Motivation
+Most DeFi apps are too complicated for new users.  
+Our goal is to create a lightweight DApp where users can swap, provide liquidity, and check basic stats without getting lost in technical stuff.
+
+## What We’re Building
+- Token swap (powered by a simple AMM model)  
+- Liquidity pool (earn rewards by adding liquidity)  
+- Dashboard with balances and history  
+
+We’re not trying to be the “next big DeFi” — just a fun and useful app to make testnet activity more engaging.
+
+## Tech Stack
+- Smart Contracts: Solidity  
+- Frontend: React + Tailwind  
+- Backend: Node.js (only for indexing and API)  
+
+## Current Progress
+- Basic UI mockup ✅  
+- Draft smart contracts ✅  
+- Integration tests (in progress) 🚧  
+
+## Roadmap
+- Week 1: Finalize contracts + deploy to testnet  
+- Week 2: Build frontend + connect wallet  
+- Week 3: Add liquidity + swap features  
+- Week 4: Polish UI + submit final version  
+
+## Why It’s Fun / Useful
+- Super easy for anyone to try DeFi on testnet  
+- Great for onboarding new users into blockchain  
+- Clean UI → no confusing buttons everywhere 😅  
+
+## Links
+- GitHub Repo: [link here]  
+- Demo (if any): [link here]  
