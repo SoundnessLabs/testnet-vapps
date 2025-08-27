@@ -1,46 +1,60 @@
-### Soundness Layer Testnet vApps
+vApp Submission: QuantumWallet
+Verification
+github_username: "Tony4rexx"
+discord_id: "959220132608106506"
+timestamp: "2025-08-27"
 
-Verify GitHub ownership and submit vApp and zkApp proposals for Soundness Layer testnet access.
+Developer
+Name: Wahab Qodri
+GitHub: @Tony4rexx
+Discord: Tony4rex
+Experience: Registered Nurse & Midwife with experience in software development and blockchain experimentation.
 
-[![Discord](https://img.shields.io/discord/1234567890?label=Discord&logo=discord)](https://discord.gg/soundnesslabs)
-[![PRs](https://img.shields.io/github/issues-pr/soundlayer/testnet-vapps?label=Submissions)](https://github.com/SoundnessLabs/testnet-vapps/pulls)
+Project
+Name & Category
+Project: QuantumWallet
+Category: defi
+Description
+QuantumWallet is a decentralized crypto wallet designed for multi-chain asset management. It allows users to securely store, send, and receive tokens across multiple blockchains with an intuitive interface and integrated security features.
 
-## Quick Start
+SL Integration
+QuantumWallet will integrate with Soundness Layer for transaction validation, smart contract execution, and decentralized identity verification. We will leverage SL’s secure APIs for wallet authentication and cross-chain operations.
 
-1. Fork this repository
-2. Copy `TEMPLATE.md` to `submissions/{category}/{your-github-username}.md`
-3. Fill out your vApp proposal
-4. Create Pull Request
-5. Join [Discord](https://discord.gg/soundnesslabs) and use `/submit-vapp` command
+Technical
+Architecture
+High-level system design includes a React frontend, Node.js backend, and Rust-based smart contracts. SL will handle blockchain operations, while WALRUS database stores user preferences and local data.
 
-## Categories
+Stack
+Frontend: React
+Backend: Node.js
+Blockchain: SL + Ethereum + Solana
+Storage: WALRUS + IPFS
 
-- **identity** - Authentication, credentials, reputation
-- **defi** - Finance, trading, payments  
-- **social** - Community, content, messaging
-- **gaming** - Games, NFTs, entertainment
-- **infrastructure** - Tools, analytics, monitoring
-- **other** - Innovative ideas
+Features
+- Multi-chain asset management
+- Secure wallet authentication via SL
+- Token swap and transfer across chains
 
-## Requirements
+Timeline
+PoC (2-4 weeks)
+ - Basic wallet creation
+ - SL integration for authentication
+ - Simple UI
 
-- Valid GitHub username (must match PR author)
-- Discord ID for verification
-- Technical architecture with SL integration
-- Realistic development timeline
+MVP (4-8 weeks)
+ - Full token management
+ - Cross-chain swaps
+ - Production-ready UI
+ - User testing
 
-## Process
+Innovation
+QuantumWallet stands out with its seamless cross-chain capabilities, secure SL-powered authentication, and intuitive user interface. It simplifies crypto management for both beginners and experienced users.
 
-1. **Submit PR** → Automated validation
-2. **Team review** → 2-3 business days  
-3. **Approval** → Sound_dev Discord role
-4. **Build PoC** → Testnet access
+Contact
+Preferred contact method: Discord @Tony4rex. Updates shared via GitHub PR comments and Discord announcements.
 
-## Resources
-
-- [X](https://x.com/SoundnessLabs)
-- [Discord](https://discord.gg/soundnesslabs)
-
-
-
-**Ready to build?** [Submit Your vApp](/TEMPLATE.md) • [Join Discord](https://discord.gg/soundnesslabs)
+Checklist before submitting:
+ - All fields completed
+ - GitHub username matches PR author
+ - SL integration explained
+ - Timeline is realistic
