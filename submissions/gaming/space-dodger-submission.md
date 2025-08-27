@@ -61,5 +61,5 @@ What makes it different: a simple yet transparent arcade game where scores canno
 Players can prove their achievements with on-chain IDs.  
 
 ## Contact
-**Discord:** yourdiscord#1234 (ID: 942338078935224361)  
+**Discord:** 79397.bnb (ID: 942338078935224361)  
 **GitHub Repo Updates:** [https://github.com/justindan2707/space-dodger-game](https://github.com/justindan2707/space-dodger-game)
