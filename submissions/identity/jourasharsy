@@ -1,0 +1,73 @@
+# vApp Submission: [kimak]
+
+## Verification
+```yaml
+github_username: "jourasharsy"
+discord_id: "296568088504303616"
+timestamp: "2025-08-27"
+```
+
+## Developer
+- **Name**: arsy
+- **GitHub**: @jourasharsy
+- **Discord**: kimak#4206
+- **Experience**: farmer
+
+## Project
+
+### Name & Category
+- **Project**: yoloo
+- **Category**: identity
+
+### Description
+1. Complexity: vApps simplify the deployment and management of complex applications by packaging multiple VMs and their dependencies into a single unit.
+2. Time-consuming deployment: vApps reduce the time and effort required to deploy applications, allowing organizations to get up and running quickly.
+
+### SL Integration  
+1. Secure Data Management: The Soundness Layer provides a secure and decentralized way to manage data, ensuring that it is tamper-proof and transparent. This can be particularly useful for applications that require high levels of data integrity, such as financial transactions or supply chain management.
+2. Scalability: The Soundness Layer is designed to support high-performance applications, making it an ideal solution for use cases that require fast and efficient data processing.
+
+## Technical
+- Modular Architecture: The Soundness Layer has a modular architecture that allows developers to build and deploy custom modules and applications.
+- Layer 1 Blockchain: The Soundness Layer is built on top of a Layer 1 blockchain, which provides a secure and decentralized foundation for the platform.
+- Smart Contract Platform: The Soundness Layer provides a smart contract platform that allows developers to build and deploy custom smart contracts.
+
+### Architecture
+The architecture and technical aspects of the Soundness Layer are designed to provide a robust and scalable framework for building secure and decentralized applications
+
+### Stack
+- **Frontend**: React
+- **Backend**: Node.js 
+- **Blockchain**: SL
+- **Storage**: WALRUS
+
+### Features
+1. High-Performance: Supporting fast transaction processing times and high throughput.
+2. Interoperability: Enabling seamless interactions with other blockchain platforms and technologies.
+
+
+## Timeline
+july 2025-jan 2026
+### PoC (2-4 weeks)
+- [✅] Basic functionality
+- [✅] SL integration
+- [✅] Simple UI
+
+### MVP (4-8 weeks)  
+- [✅] Full features
+- [✅] Production ready
+- [✅] User testing
+
+## Innovation
+ Soundness Layer's unique features and benefits make it a compelling solution for developers and users looking for a secure, scalable, and decentralized platform for building and deploying applications.
+
+## Contact
+email: bombtower35@gmail.com
+telegram: @wajibkambek
+
+
+**Checklist before submitting:**
+- [✅] All fields completed
+- [✅] GitHub username matches PR author  
+- [✅] SL integration explained
+- [✅] Timeline is realistic
