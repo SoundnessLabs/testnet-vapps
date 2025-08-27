@@ -1,1 +1,68 @@
-OxyPriva is a privacy-first verification tool designed for Web3 communities. It allows members to securely confirm asset ownership—like NFTs or tokens—without exposing their wallet or linking it directly to their Discord identity. With OxyPriva, communities can grant exclusive roles and benefits to their members while ensuring anonymity and trust remain intact.
+github_username: "lutpi22"
+discord_id: "luffy"
+timestamp: "2025-08-26"
+
+### Developer ###
+
+Name: Lutpi Aziz Alfurqon
+GitHub: lutpi22
+Discord: lutpialf
+Experience: Background in Web3, social community tools, and blockchain privacy solutions.
+
+### Project ###
+
+Name & Category
+Project: OxyPriva
+Category: Social/Utility
+Description
+OxyPriva is a privacy-first verification tool for Web3 communities. It allows members to securely prove ownership of assets (NFTs, tokens, or passes) to unlock exclusive Discord roles—without exposing their wallet address or linking it directly to their social identity.
+This solves one of the biggest problems in community verification today: members want exclusivity and proof of ownership, but they don’t want to compromise their privacy by revealing their wallet activity.
+SL Integration
+OxyPriva integrates with the Soundness Layer (SL) to ensure that verification is both secure and privacy-preserving.
+
+### 1. Verification Process
+A user privately connects their wallet on OxyPriva.
+A Zero-Knowledge Proof (ZK-Proof) is generated via SL, confirming ownership of the required asset without revealing the wallet address.
+The ZK-Proof is sent to OxyPriva’s Discord bot.
+The bot grants the appropriate role automatically.
+
+### 2. Data Privacy
+Wallet addresses are never stored or revealed.
+Only the proof is passed to Discord, ensuring identity and financial activity remain separate.
+
+### 3. Benefits of SL Integration
+Privacy: Wallet details are never shared.
+Security: Proofs prevent fraudulent role claims.
+Transparency: Anyone can verify the proof without accessing sensitive user data.
+Simplicity: One-click verification with automated Discord role assignment.
+
+### Technical architecture ###
+# Medium-level system design:
+Frontend: User-facing dApp for wallet connection & proof generation.
+Backend: Proof verification & integration service.
+Discord Bot: Grants roles based on valid proofs.
+Blockchain + SL: Provides proof verification without exposing wallet data.
+
+### Stack ###
+Frontend: React / Next.js
+Backend: Node.js / Python
+Blockchain: Ethereum + Soundness Layer (SL)
+Storage: Minimal (only hashes/proofs, no raw user data)
+
+### Features ###
+
+Private Verification: Prove asset ownership without exposing your wallet.
+Discord Integration: Automated role assignment with proof validation.
+Zero-Knowledge Proofs: SL ensures mathematical proof of ownership & authenticity.
+Multi-Asset Support: NFTs, tokens, or passes can all be verified
+
+### Innovation ###
+OxyPriva is unique because it blends Web3 privacy tech (ZK-Proofs) with community engagement tools (Discord roles).
+Unlike current solutions that force users to publicly link their wallet to Discord, OxyPriva keeps financial identity completely private while still delivering verifiable exclusivity.
+Why people will use it:
+Trust & Transparency: Communities can confirm member authenticity without doxxing wallets.
+Privacy by Default: Members never risk exposing sensitive wallet data.
+User-Friendly: Simple, one-click verification flow works for both crypto-native and casual users.
+
+Contact
+Telegram: https://t.me/@LutpiAlf
