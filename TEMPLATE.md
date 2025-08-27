@@ -1,22 +1,22 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: 8Queens Solver
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "ddettaa"
+discord_id: "624244764811853825"
+timestamp: "2025-08-27"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
+- **Name**: Aditya
+- **GitHub**: @ddettaa
+- **Discord**: ddettaa
 - **Experience**: Brief background
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
+- **Project**: 8Queens Solver
 - **Category**: identity/defi/social/gaming/infrastructure/other
 
 ### Description
