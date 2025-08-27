@@ -11,7 +11,7 @@ timestamp: "2025-08-27"
 - **Name**: Mahardhika Rahardi
 - **GitHub**: @spleand
 - **Discord**: spleand
-- **Experience**: Brief background
+- **Experience**: Web3 & DeFi developer skilled in smart contracts, dApps, and AI-powered finance
 
 ## Project
 
