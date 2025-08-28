@@ -16,8 +16,8 @@ timestamp: "2025-08-28"
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: DecentraSwap
+- **Category**: Defi
 
 ### Description
 What problem does your vApp solve? What does it do?
@@ -52,19 +52,20 @@ High-level system design and approach
 - **Storage**: Database/WALRUS/IPFS/etc
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+1. Core feature 1 : Swap (x*y=k) for two test tokens
+2. Core feature 2 :Add/Remove liquidity (LP token mint/burn)
+3. Core feature 3 :Batched settlement proof flow (mocked then real SL)
+4. Core feature 4 :Dashboard: pool state, pending batch, proof status, historical snapshots
 
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
+- [✓] Basic functionality
 - [ ] SL integration
 - [ ] Simple UI
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
+- [✓] Full features
 - [ ] Production ready
 - [ ] User testing
 
@@ -85,7 +86,7 @@ Preferred Contact: Email zkwokwok@gmail.com
 Updates: Will be shared via GitHub
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [✓] All fields completed
+- [✓] GitHub username matches PR author  
+- [✓] SL integration explained
+- [✓] Timeline is realistic
