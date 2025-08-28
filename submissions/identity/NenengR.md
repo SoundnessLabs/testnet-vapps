@@ -44,14 +44,14 @@ High-level system design and approach
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [true] Basic functionality
-- [true] SL integration
-- [true] Simple UI
+- [x] Basic functionality
+- [x] SL integration
+- [x] Simple UI
 
 ### MVP (4-8 weeks)  
-- [true] Full features
-- [true] Production ready
-- [true] User testing
+- [x] Full features
+- [x] Production ready
+- [x] User testing
 
 ## Innovation
 What makes this unique? Why will people use it? simple secure and fast 
@@ -61,7 +61,7 @@ Preferred contact method and where you'll share updates. on github
 
 
 **Checklist before submitting:**
-- [true] All fields completed
-- [true] GitHub username matches PR author  
-- [true] SL integration explained
-- [true] Timeline is realistic
+- [x] All fields completed
+- [x] GitHub username matches PR author  
+- [x] SL integration explained
+- [x] Timeline is realistic
