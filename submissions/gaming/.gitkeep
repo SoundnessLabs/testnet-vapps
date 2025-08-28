@@ -1,1 +1,99 @@
-# Submissions for submissions/gaming category
+# vApp Submission: [SoundQuest]
+
+## Verification
+```yaml
+github_username: "sarge2828"
+discord_id: "1231020589507154002"
+timestamp: "2025-08-28"
+```
+
+## Developer
+- **Name**: Aldi Rahman
+- **GitHub**: @sarge2828
+- **Discord**: aldyyy28
+- **Experience**: Web3 testnet contributor, crypto airdrops participant, and blockchain enthusiast exploring gaming utilities
+
+## Project
+
+### Name & Category
+- **Project**: SoundQuest Adventure
+- **Category**: gaming
+
+### Description
+SoundQuest Adventure is an on-chain adventure and quest game where players complete daily missions, puzzles, and exploration challenges.
+Each quest completion generates a zk-proof to confirm the player achieved it fairly. Players earn NFT badges, tokens, and reputation that can be used across other Soundness Layer games
+
+### SL Integration  
+Use Soundness Layer zk-proofs to verify quest completion.
+
+Store player reputation and progress on Soundness Layer.
+
+## Technical
+
+### Architecture
+1. Frontend: Web-based quest dashboard + simple mini-games.
+
+
+2. Backend: API server to manage quest logic.
+
+
+3. Soundness Layer (SL):
+
+zk-proof for quest validation.
+
+Identity & reputation tracking.
+
+
+### Stack
+- **Frontend**: React
+- **Backend**: Node.js  
+- **Blockchain**: SL + Polygon testnet
+- **Storage**: WALRUS
+
+### Features
+1. Daily Quests – tasks (puzzle, trivia, exploration mini-games).
+
+
+2. Quest Proofs – zk-proof ensures quest completed fairly.
+
+
+3. NFT Badges – unique items for achievements.
+
+
+4. Reputation System – SL tracks honest completion.
+
+
+5. Leaderboard – rank players by quest points.
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [✓] Basic functionality
+- [ ] SL integration
+- [ ] Simple UI
+
+### MVP (4-8 weeks)  
+- [ ] Full features
+- [ ] Production ready
+- [✓] User testing
+
+## Innovation
+First zk-proof verified quest system in gaming.
+
+Rewards are portable across other SL games.
+
+Encourages daily engagement with fair and transparent tracking.
+
+## Contact
+Telegram: @aldyyy28
+
+Discord: aldyyy28
+
+X/Twitter: @aldyyy_yyy
+
+
+**Checklist before submitting:**
+- [✓] All fields completed
+- [ ] GitHub username matches PR author  
+- [ ] SL integration explained
+- [ ] Timeline is realistic
