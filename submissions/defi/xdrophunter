@@ -1,0 +1,140 @@
+github_username: "xdrophunter"
+discord_id: "1410638808113741987"
+timestamp: "2025-08-28"
+
+Developer
+
+Name: Xdrop Hunter
+
+GitHub: @xdrophunter
+
+Discord: xdrophunter
+
+Experience: I’ve been experimenting with Solidity and React-based dApps for a while. Previously built small testnet projects like a simple DEX and NFT marketplace. Now I want to try building a DeFi protocol on top of Soundness Layer.
+
+
+
+---
+
+Project
+
+Summary
+
+SoundFi is a simple DeFi app where users can deposit tokens to earn yield or borrow tokens by locking collateral.
+It’s meant to test how lending and borrowing can run smoothly on the Soundness Layer testnet, while also exploring how zk-features can make the system safer and more transparent.
+
+Name & Category
+
+Project: SoundFi
+
+Category: defi
+
+
+Description
+
+Most lending protocols are either too complex or not friendly for new users.
+SoundFi tries to keep things simple:
+
+Lenders put tokens in and earn interest.
+
+Borrowers lock collateral and get liquidity.
+
+If collateral value drops, the system handles liquidation.
+
+
+This is mainly an experiment to show how Soundness Layer can support basic DeFi primitives.
+
+SL Integration
+
+Contracts deployed directly on SL testnet.
+
+Using SL RPC for transactions & wallet connection.
+
+Plan to test zk-verification for loan health checks in the future.
+
+
+
+---
+
+Technical
+
+Architecture
+
+Frontend: React + wagmi hooks
+
+Smart Contracts: LendingPool + Oracle Adapter on SL
+
+Service: Node.js listener to track events and save loan status
+
+Storage: PostgreSQL for logs, IPFS for metadata
+
+
+Features
+
+1. Deposit & earn yield
+
+
+2. Borrow with over-collateralization
+
+
+3. Automatic liquidation on collateral drop
+
+
+
+
+---
+
+Timeline
+
+PoC (2–4 weeks):
+
+Deploy basic contracts on SL testnet
+
+Simple UI for deposit/borrow
+
+Wallet connection
+
+
+MVP (4–8 weeks):
+
+Oracle price feed + liquidation logic
+
+Transaction history dashboard
+
+User testing + demo
+
+
+
+---
+
+Innovation
+
+Keep DeFi simple and beginner-friendly.
+
+Explore zk features of Soundness Layer for more trust and transparency.
+
+Serve as a reference project for other devs who want to build on SL.
+
+
+
+---
+
+Contact
+
+Discord: @xdrophunter
+
+Github: @xdrophunter
+
+
+
+---
+
+✅ Checklist
+
+[x] Info filled
+
+[x] GitHub matches PR author
+
+[x] SL integration explained
+
+[x] Timeline realistic
