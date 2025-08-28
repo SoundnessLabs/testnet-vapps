@@ -1,0 +1,30 @@
+# Submissions for submissions/defi category
+# DEFIVERSE
+
+**Author (GitHub):** machadocrypto  
+**Discord ID:** gmachado00  
+**Category:** defi  
+**One-line Summary:** Innovative DeFi platform to maximize testnet yields.
+
+## Full Description
+DEFIVERSE is a DeFi project focused on providing yield opportunities safely and transparently on testnets. The goal is to allow users to experiment with staking and yield farming strategies while learning about DeFi metrics and associated risks.
+
+## Technical Architecture (summary)
+- Integration with Soundness Layer: all transactions and smart contracts are auditable via SL to ensure security and traceability.
+- Technologies: Sui Network, Move, JavaScript for front-end, Rust for back-end.
+- Main components: web front-end, Move contracts for staking/farming, real-time metrics dashboards.
+
+## Roadmap / Timeline
+- Week 1: Environment setup and initial deploy on testnet.
+- Week 2: Development of staking/farming module.
+- Week 3: Creation of metrics dashboard.
+- Week 4: Testing, adjustments, and final documentation.
+- MVP: end of Week 4.
+
+## Links
+- Repo/Code: https://github.com/machadocrypto/gabrielmachado
+- Additional documentation: <in construction>
+
+## Contact
+- GitHub: https://github.com/machadocrypto
+- Discord: gmachado00
