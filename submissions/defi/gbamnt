@@ -1,0 +1,78 @@
+vApp Submission: [Mugen]
+Verification
+github_username: gbamnt
+discord_id: glamorim
+timestamp: "2025-08-27"
+
+
+Developer
+Name: Gabriel Amorim
+GitHub: @gbamnt
+Discord: glamorim
+Experience: Heya, Soundy team! I'm Gabriel, a Production Engineering student and developer, currently focused on building and creating content around the Sui network. My background combines academic experience with hands-on development, and I'm excited to contribute to the growth of the Sui ecosystem.
+
+Project
+Name & Category
+Project: Mugen
+Category: defi
+
+Description
+What problem does your vApp solve? 
+
+My vApp is meant to be the first multi-chain dashboard, using SUI network and IKA tech. Still can't disclose all while we talk with IKA leads, yet it will be unique while also being the fastest and cheapest. Also, we plan to solve the hard anf inefficient UI issues.
+
+SL Integration
+How will you use Soundness Layer? What specific SL features?
+
+Uses: 1- Proof generation & verification with all DeFi operations validated through SL proofs for maximum security.
+2- Blob storage via WALRUS: transaction history and user session data stored efficiently on decentralized storage.
+3- Cross-chain abstraction: we are going to use SL features to simplify the interaction between SUI and other supported networks (first time in history).
+
+Technical
+Architecture
+High-level system design and approach
+We are building Mugen with the idea that the system will be a web3 dashboard platform with the following flow:
+Our Frontend (React/Next.js) connects user wallets (Slush example).
+Smart contracts on MOVE, with SUI handle swaps, staking and excluding BRIDGES (IKA tech) while changing users check.
+Backend (Node.js/TypeScript) provides APIs for indexing blockchain data, caching, analytics and serving proofs (can change).
+Integration with Soundness Layer (SL) for cryptographic proofs and decentralized validation (major importance).
+First choice will be WAL Storage layer (WALRUS) for persisting historical transactions and portfolio data, while using all SUI related protocols.
+High-level flow:
+User -> Frontend -> Backend/API -> SUI network + SL proofs + WALRUS storage - simple as that.
+
+Stack
+Frontend: Next.js (React) + TailwindCSS + SUI Wallet Adapter SDK
+Backend: Node.js (TypeScript) + Express/Fastify + GraphQL API
+Blockchain: SUI network (Move smart contracts) + SL integration for proofs + IKA and WAL interoperability
+Storage: WALRUS
+
+Features
+First multi-chain dashboard slash hub without bridges, featuring major chains.
+First to present looping in multiple protocols in different chains without bridges nor different websites, with few transactions, maximum speed and lower costs.
+SL powered transaction validation with IKA 2PC-MPC tech applied in a whole.
+
+Timeline
+PoC (2-4 weeks)
+[x] Basic functionality
+[ ] SL integration
+[x] Simple UI
+
+MVP (4-8 weeks)
+[ ] Full features
+[ ] Production ready
+[ ] User testing
+
+Innovation
+What makes this unique? Why will people use it?
+Mugen will be the first multi-chain DeFi dashboard slash hub allowing operability with hundreds of protocols, centered on SUI network and enhanced by SL proofs, making DeFi easier, faster, cheaper and more time efficient, with a special UI developed for DeFi users.
+
+Contact
+Preferred contact method and where you'll share updates.
+
+telegram @rcurtibc / discord @rafacurti - we can create a specific channel or I can share the following steps. The project is still being developed, so timeline will be different, with around 8-16 weeks following.
+
+Checklist before submitting:
+[x] All fields completed
+[x] GitHub username matches PR author
+[x] SL integration explained
+[x] Timeline is realistic
