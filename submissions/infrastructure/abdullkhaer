@@ -1,0 +1,70 @@
+# vApp Submission: [Your Project Name]
+
+## Verification
+```yaml
+github_username: "0x91111"
+discord_id: "844818910804705311"
+timestamp: "2025-01-15"
+```
+
+## Developer
+- **Name**: abdullkhaer
+- **GitHub**: @abdullkhaer
+- **Discord**: 0x91111#5098
+- **Experience**: Brief background
+
+## Project
+
+### Name & Category
+- **Project**: CodeGuardian”: AI-powered Static Code Analyzer for Security & Soundness
+- **Category**: infrastructure
+
+### Description
+An AI-powered tool that analyzes source code to detect potential bugs, memory leaks, and security vulnerabilities—with a focus on logical soundness, such as checking function pre/post conditions or identifying race conditions
+
+### SL Integration  
+Backend: Python + FastAPI
+AI: LLM (e.g., open-source models like StarCoder or CodeBERT)
+Frontend: React
+Integration: GitHub Apps
+
+## Technical
+
+### Architecture
+A secure alternative to platforms like Google Forms, with a strong emphasis on data validation, cryptographic integrity, and tamper-proof submission logs. Ideal for academic surveys, research data, or small-scale elections.
+
+### Stack
+- **Frontend**: React/Vue/etc
+- **Backend**: Rust/Node.js/Python/etc  
+- **Blockchain**: SL + others
+- **Storage**: Database/WALRUS/IPFS/etc
+
+### Features
+1. Core feature 1
+2. Core feature 2  
+3. Core feature 3
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [1] Basic functionality
+- [1] SL integration
+- [1] Simple UI
+
+### MVP (4-8 weeks)  
+- [ ] Full features
+- [ ] Production ready
+- [1] User testing
+
+## Innovation
+What makes this unique? Why will people use it?
+
+## Contact
+Preferred contact method and where you'll share updates.
+
+
+**Checklist before submitting:**
+- [ ] All fields completed
+- [1] GitHub username matches PR author  
+- [ ] SL integration explained
+- [1] Timeline is realistic
