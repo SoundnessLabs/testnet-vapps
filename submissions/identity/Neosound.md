@@ -2,14 +2,14 @@
 
 ## Verification
 ```yaml
-github_username: "NenengR"
+github_username: "agusty30"
 discord_id: "848078128123346945"
 timestamp: "2025-08-26"
 ```
 
 ## Developer
 - **Name**: heliosneo.eth
-- **GitHub**: @NenengR
+- **GitHub**: @agusty30
 - **Discord**: nengRahma#2670
 - **Experience**: Full-stack developer with 4 years in Web3 development , identity systems and experienced in Solidity, Rust, smart contract design, and cross-chain integrations.
 
@@ -92,6 +92,6 @@ The Defi-Cross-Chain-Swap project innovates by providing a secure and reliable m
 
 ## Contact
 For any questions or collaboration opportunities, feel free to reach out:
-- Email: nr130380i@gmail.com
+- Email: agusty30@gmail.com
 - LinkedIn: @agus-yustiara-237b0b37
-- GitHub: @NenengR
+- GitHub: @agusty30
