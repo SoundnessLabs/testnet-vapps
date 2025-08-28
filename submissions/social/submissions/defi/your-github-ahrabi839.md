@@ -1,4 +1,5 @@
-# vApp Submission: [Your Project Name]
+
+# vApp Submission: social
 
 ## Verification
 ```yaml
