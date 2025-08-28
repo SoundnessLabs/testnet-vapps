@@ -1,60 +1,67 @@
-# vApp Submission: CrossChain ID Verifier
+# vApp Submission: [Your Project Name]
 
 ## Verification
 ```yaml
-github_username: "example-user"
+github_username: "your-username"
 discord_id: "123456789012345678"
 timestamp: "2025-01-15"
 ```
 
 ## Developer
-- **Name**: Example Developer
-- **GitHub**: @example-user
-- **Discord**: example#1234
-- **Experience**: 3 years Web3, identity systems
+- **Name**: Your Name
+- **GitHub**: @your-username
+- **Discord**: username#1234
+- **Experience**: Brief background
 
 ## Project
 
 ### Name & Category
-- **Project**: CrossChain ID Verifier
-- **Category**: identity
+- **Project**: Your vApp Name
+- **Category**: identity/defi/social/gaming/infrastructure/other
 
 ### Description
-Verifies user identity across multiple blockchains using a single credential. Eliminates need to re-establish reputation on each chain.
+What problem does your vApp solve? What does it do?
 
-### SL Integration
-Uses SL as coordination layer to manage cross-chain identity state and verify credentials with privacy preservation.
+### SL Integration  
+How will you use Soundness Layer? What specific SL features?
 
 ## Technical
 
 ### Architecture
-SL smart contracts coordinate identity verification across chains. ZK proofs enable privacy-preserving verification.
+High-level system design and approach
 
 ### Stack
-- **Frontend**: React + TypeScript
-- **Backend**: Node.js + GraphQL
-- **Blockchain**: SL + Ethereum + Polygon
-- **Storage**: IPFS + PostgreSQL
+- **Frontend**: React/Vue/etc
+- **Backend**: Rust/Node.js/Python/etc  
+- **Blockchain**: SL + others
+- **Storage**: Database/WALRUS/IPFS/etc
 
 ### Features
-1. Unified identity across chains
-2. Privacy-preserving verification
-3. Developer API for integration
+1. Core feature 1
+2. Core feature 2  
+3. Core feature 3
 
 ## Timeline
 
-### PoC (3 weeks)
-- [x] SL identity contract
-- [x] Basic frontend
-- [ ] Cross-chain verification
+### PoC (2-4 weeks)
+- [ ] Basic functionality
+- [ ] SL integration
+- [ ] Simple UI
 
-### MVP (6 weeks)
-- [ ] Full verification system
-- [ ] API for developers
-- [ ] Mobile support
+### MVP (4-8 weeks)  
+- [ ] Full features
+- [ ] Production ready
+- [ ] User testing
 
 ## Innovation
-First identity system using SL for true cross-chain coordination with privacy preservation.
+What makes this unique? Why will people use it?
 
 ## Contact
-Discord preferred. Updates posted in community channels.
+Preferred contact method and where you'll share updates.
+
+
+**Checklist before submitting:**
+- [ ] All fields completed
+- [ ] GitHub username matches PR author  
+- [ ] SL integration explained
+- [ ] Timeline is realistic
