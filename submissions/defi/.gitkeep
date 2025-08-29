@@ -1,1 +1,71 @@
 # Submissions for submissions/defi category
+# vApp Submission: SounDex
+
+## Verification
+```yaml
+github_username: "Boo-Yong"
+discord_id: "837513220344381460"
+timestamp: "2025-01-15"
+```
+
+## Developer
+- **Name**: Boo-Yong
+- **GitHub**: @boo-yong
+- **Discord**: ramdhayana
+- **Experience**: Web3 Fans, Soundness Testnet
+
+## Project
+
+### Name & Category
+- **Project**: SounDex
+- **Category**: defi
+
+### Description
+SounDex is a cross-blockchain DeFi vApp that connects traders with the best prices,
+protects liquidity providers from the risk of impermanent loss,
+and automatically optimizes liquidity. One app, all DeFi solutions.
+
+### SL Integration  
+use Soundness Layer to $SNDX Token → governance token for voting, staking, and revenue-sharing.
+
+## Technical
+
+### Architecture
+High-level system design and approach
+
+### Stack
+- **Frontend**: React/Vue/etc
+- **Backend**: Rust/Node.js/Python/etc  
+- **Blockchain**: SL + others
+- **Storage**: Database/WALRUS/IPFS/etc
+
+### Features
+1. SounDex Impermanent Loss Shield (SILS)
+2. Cross-Chain One-Click Swap  
+3. Dynamic Yield Mode
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [x] Basic functionality
+- [x] SL integration
+- [x] Simple UI
+
+### MVP (4-8 weeks)  
+- [x] Full features
+- [ ] Production ready
+- [x] User testing
+
+## Innovation
+SounDex offers SounDex Impermanent Loss Shield (SILS), which is an impermanent loss shield,
+so that every user who farms does not lose too much.
+
+## Contact
+Just on DISCORD
+
+
+**Checklist before submitting:**
+- [x] All fields completed
+- [x] GitHub username matches PR author  
+- [x] SL integration explained
+- [x] Timeline is realistic
