@@ -2,28 +2,27 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "Garz26"
+discord_id: "528938185112158229"
+timestamp: "2025-08-29"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: GarzNode
+- **GitHub**: @Garz26
+- **Discord**: garz26
+- **Experience**: I have More than three years of experience as a Node.js programmer, executing various projects including Dimension, Celestia, and Aptos. Proficient in building and deploying scalable, robust applications.
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: GigaGarz
+- **Category**: gaming
 
 ### Description
-What problem does your vApp solve? What does it do?
-
+My vApp solves the problem of complex virtual world creation in game development. It provides a streamlined platform for designing, managing, and simulating virtual environments,node running,facilitating collaboration and scalability.
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+I would use the Soundness Layer (SL) to implement robust, performant, and maintainable audio systems within games. Specific SL features I'd leverage include
 
 ## Technical
 
@@ -44,24 +43,25 @@ High-level system design and approach
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+- [✅] Basic functionality
+- [✅] SL integration
+- [✅] Simple UI
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
+- [✅] Full features
+- [✅] Production ready
+- [✅] User testing
 
 ## Innovation
 What makes this unique? Why will people use it?
 
 ## Contact
-Preferred contact method and where you'll share updates.
-
+email:tupaisengarz@gmail.com
+discord: garz26
+twitter: @s1_tegar
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [✅] All fields completed
+- [✅] GitHub username matches PR author  
+- [✅] SL integration explained
+- [✅] Timeline is realistic
