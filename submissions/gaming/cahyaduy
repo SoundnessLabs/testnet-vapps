@@ -1,0 +1,83 @@
+## Developer
+
+* **GitHub**: cahyaduy
+* **Discord**: fansyahhs
+
+## Project
+
+### Name & Category
+
+* **Project**: Time‑Proofed Gaming (TPG)
+* **Category**: gaming
+
+### Description
+
+**Time‑Proofed Gaming** is a decentralized proof‑of‑playtime system that records verifiable game sessions using zero‑knowledge proofs and Soundness Layer attestations. Players can prove “I played ≥ X minutes” without exposing raw gameplay logs, and use these proofs to unlock rewards, achievements, or cross‑game perks. This ensures fairness, tamper‑proof progression, and portability of achievements across games.
+
+### SL Integration
+
+Time‑Proofed Gaming integrates **Soundness Layer** to:
+
+1. Verify zkProofs of playtime or session completion.
+2. Attest proofs on‑chain for portability and immutability.
+3. Enable reward distribution (NFTs, tokens, badges) only upon valid proof verification.
+
+## Technical
+
+### Architecture
+
+1. **Frontend (Web Client)** – Session timer, proof generator, wallet connect.
+2. **Prover** – Client‑side Ligero circuits for session integrity & time ≥ threshold.
+3. **Storage** – Walrus/IPFS for storing proof blobs, returning CIDs.
+4. **Blockchain Integration** – Soundness Layer for attestation; Sui/EVM chain for posting session references and minting rewards.
+5. **Verifier API** – For communities/games to check attestations and grant rewards.
+
+### Stack
+
+* **Frontend**: React (web) with wallet integration
+* **Prover**: Ligero zk circuits
+* **Backend (optional)**: Node.js relay for indexing sessions
+* **Blockchain**: Soundness Layer (SL) + Sui/EVM for reward logic
+* **Storage**: Walrus / IPFS for proofs and assets
+
+### Features
+
+1. **Proof‑of‑Playtime** – Players generate ZK proofs of session length.
+2. **Time‑Locked Achievements** – Badges or NFTs unlocked after verified time milestones.
+3. **Cross‑Game Rewards** – Proofs can be reused to claim perks in other games.
+4. **Leaderboards** – Public list of verified sessions without exposing raw logs.
+5. **Fair Rewards** – Rewards gated only by valid SL‑attested proofs.
+
+## Timeline
+
+### PoC (2–4 weeks)
+
+* [ ] Basic session timer + proof mock
+* [ ] Simple UI (start, stop, claim)
+* [ ] Initial SL attestation integration (proof upload → attestation handle)
+
+### MVP (4–8 weeks)
+
+* [ ] Full zk circuit (time‑bound proof, nullifier uniqueness)
+* [ ] NFT/Token reward minting on claim
+* [ ] Public leaderboard of attested sessions
+* [ ] Documentation & verifier script
+
+## Innovation
+
+1. **Proof‑Based Playtime** – Introduces cryptographic verification of playtime.
+2. **Cross‑Game Utility** – Proofs portable across games, enabling shared achievements.
+3. **Privacy‑Preserving** – No raw gameplay data exposed, only validity proofs.
+4. **Soundness Layer Pioneer** – First to use SL for casual gaming achievements.
+
+## Contact
+
+* X / Twitter: cahyadi310068
+* Discord: fansyahhs
+
+**Checklist before submitting:**
+
+* [ ] All fields completed
+* [ ] GitHub username matches PR author
+* [ ] SL integration explained
+* [ ] Timeline is realistic
