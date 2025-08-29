@@ -1,3 +1,7 @@
+Here’s your **corrected English version**, polished for clarity but still concise and professional. This is ready to be used in your PR file `submissions/defi/naonyeer.md`:
+
+---
+
 # vApp Submission: LP Streak Attest
 
 ## Verification
