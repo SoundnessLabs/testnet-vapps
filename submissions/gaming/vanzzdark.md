@@ -1,15 +1,14 @@
-
 # Crypto Fortune Cookie (Random-Only)
 
 **Category:** gaming  
-**Author:** @vanzzdark 
-**Discord:** superma
+**Author:** @vanzzdark
+**Discord:** superma3688
 
 ## 1) Summary
 A simple vApp: user connect wallet → click “Open Fortune Cookie” → contract returns a random crypto-themed fortune. Fun, viral, and perfect as testnet demo.
 
 ## 2) Problem & Motivation
-Communities need tiny, delightful on-chain experiences to onboard users. This vApp provides instant gratification (one-click) and easy for community
+Communities need tiny, delightful on-chain experiences to onboard users. This vApp provides instant gratification (one-click) dan cocok untuk aktivasi komunitas.
 
 ## 3) User Stories
 - As a user, I connect wallet and click a button to receive a fortune.
@@ -26,7 +25,7 @@ Communities need tiny, delightful on-chain experiences to onboard users. This vA
 - **Smart Contract (Solidity):** stores predefined fortunes; generates pseudo-random index (time + sender + prevrandao).
 - **Frontend:** minimal React (wagmi/ethers) or plain ethers.js; single button “Open Fortune”.
 - **Storage:** on-chain array for messages (short strings).
-- **No NFTs, no images** (MVP light and fast).
+- **No NFTs, no images** (MVP light and fasr).
 
 ## 6) Soundness Layer Integration Plan
 - **MVP (this submission):** pure vApp on-chain demo to qualify; no ZK proof.
@@ -53,3 +52,4 @@ This keeps MVP simple today while aligning with Soundness Layer’s verification
 
 ## 10) Team
 Solo builder (@vanzzdark). Background: web3 tinkerer, quick prototyper.
+
