@@ -1,0 +1,53 @@
+vApp Submission: [game]
+Verification
+github_username: "jokoae12"
+discord_id: "710872312072634439"
+timestamp: "2025-01-15"
+Developer
+Name: kristin
+GitHub: @jokoae12
+Discord: kristin2628
+Experience: nido operator
+Project
+Name & Category
+Project: game
+Category: game
+What problem does your vApp solve? What does it do?
+
+SL Integration
+I play games and submit them through this CLI, it's really fun.
+
+Technical
+Architecture
+High-level systems design and approach
+
+Stack
+Frontend: React/Vue/etc.
+Backend: Rust/Node.js/Python/etc.
+Blockchain: SL + others
+Storage: Database/WALRUS/IPFS/etc.
+Features
+Core feature 1
+Core feature 2
+Core feature 3
+Timeline
+PoC (2-4 weeks)
+Basic functionality
+SL Integration
+Simple UI
+MVP (4-8 weeks)
+Full features
+Production ready
+User testing
+Innovation
+This is very different from the others
+
+Contact
+I will share on my xsaya account and Telegram
+
+Checklist before submitting:
+
+All fields filled in
+GitHub username matches PR author
+SL Integration explained
+Realistic timeline
