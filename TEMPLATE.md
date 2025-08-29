@@ -1,29 +1,30 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: SoundDex
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
+github_username: "Boo-Yong"
+discord_id: "837513220344381460"
 timestamp: "2025-01-15"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: Oxboo
+- **GitHub**: @Boo-Yong
+- **Discord**: ramdhayana
+- **Experience**: web3 enthusiast
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: SoundDex “Where DeFi Sounds Right”
+- **Category**: ~~identity~~/defi/~~social~~/~~gaming~~/~~infrastructure~~/~~other~~
 
 ### Description
-What problem does your vApp solve? What does it do?
+SounDex is Aggregated Liquidity Connecting liquidity from multiple DEXs & AMMs → more efficient swaps, fairer pricing, lower slippage.
+Clear & Transparent “Sound”, Transparent visualization of swap lines & fees, like a “clear voice” that everyone can hear.
 
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+Community Governance, $SNDX tokens are used for voting → the community can give “voice decisions” on the project roadmap.
 
 ## Technical
 
@@ -44,24 +45,25 @@ High-level system design and approach
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+- [x] Basic functionality
+- [x] SL integration
+- [x] Simple UI
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
+- [x] Full features
 - [ ] Production ready
-- [ ] User testing
+- [x] User testing
 
 ## Innovation
-What makes this unique? Why will people use it?
+Aggregated Liquidity Across Chains, Combine liquidity from multiple DEXs and blockchains → minimal slippage, competitive pricing.
+Users can access hundreds of pools using just one simple interface.
 
 ## Contact
-Preferred contact method and where you'll share updates.
+Social Media Like Twitter, Discord, Telegram, and Gmail or other
 
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [x] All fields completed
+- [x] GitHub username matches PR author  
+- [x] SL integration explained
+- [x] Timeline is realistic
