@@ -1,67 +1,64 @@
-# vApp Submission: [Your Project Name]
+vApp Submission: CryptoVault
 
-## Verification
-```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
-```
+Verification
+github_username: "WahabQ0"
+discord_id: "pribilax"
+timestamp: "2025-08-29"
 
-## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+Developer
+Name: Wahab Qodri
+GitHub: @WahabQ0
+Discord: pribilax
+Experience: protocol tester data systems, transitioning into blockchain and DeFi development. Skilled in secure data handling and decentralized applications.
 
-## Project
+Project
+Name & Category
+Project: CryptoVault
+Category: defi
 
-### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+Description
+CryptoVault is a decentralized finance (DeFi) vault management platform that allows users to securely store, track, and grow their crypto assets. It addresses the problem of fragmented DeFi portfolios and risky storage by providing a unified, audited, and automated vault system.
 
-### Description
-What problem does your vApp solve? What does it do?
+SL Integration
+- Use Soundness Layer (SL) for secure transaction validation and on-chain audit proofs.  
+- SL ensures multi-layer authentication for vault access and protects against unauthorized operations.  
+- Decentralized verification of user holdings and transaction history.
 
-### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+Technical
+Architecture
+Frontend provides user dashboard and vault management. Backend handles automated vault operations, yield aggregation, and security checks. SL is integrated to validate all transactions and ensure tamper-proof records on-chain.
 
-## Technical
+Stack
+Frontend: React + Tailwind  
+Backend: Node.js  
+Blockchain: SL + Ethereum + Polygon  
+Storage: WALRUS + IPFS for encrypted vault metadata  
 
-### Architecture
-High-level system design and approach
+Features
+- Secure multi-chain vault storage  
+- Automated yield optimization  
+- Transaction auditing with tamper-proof proofs  
 
-### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
+Timeline
+PoC (2-4 weeks)
+- Vault creation and management  
+- SL integration for secure authentication  
+- Simple dashboard UI  
 
-### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+MVP (4-8 weeks)
+- Full multi-chain vault support  
+- Automated yield optimization  
+- Production-ready security and user testing  
 
-## Timeline
+Innovation
+CryptoVault uniquely combines secure DeFi vault management with SL-powered validation, giving users confidence in asset security and transparency. Unlike generic wallets, it automates yield while maintaining decentralized auditability.
 
-### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+Contact
+Preferred contact: Discord (pribilax)  
+Updates will also be shared on GitHub @WahabQ0
 
-### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
-
-## Innovation
-What makes this unique? Why will people use it?
-
-## Contact
-Preferred contact method and where you'll share updates.
-
-
-**Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+Checklist before submitting:
+✅ All fields completed  
+✅ GitHub username matches PR author  
+✅ SL integration explained  
+✅ Timeline is realistic
