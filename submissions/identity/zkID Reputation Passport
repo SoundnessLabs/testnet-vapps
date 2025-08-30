@@ -1,0 +1,106 @@
+# vApp Submission: zkID Reputation Passport
+
+## Verification
+```yaml
+github_username: "cuye2" 
+discord_id: "907955807977631744"
+timestamp: "2025-08-30"
+```
+
+## Developer
+- **Name**: ajay
+- **GitHub**: @cuye2
+- **Discord**: udingaga
+- **Experience**: Web3 developer with experience in zk-based identity solutions, DAO tooling, and building smart contracts.
+
+## Project
+
+### Name & Category
+- **Project**: zkID Reputation Passport
+- **Category**: identity
+
+### Description
+zkID Reputation Passport is a privacy-preserving decentralized identity system that aggregates verifiable credentials (on-chain + off-chain).
+It allows users to prove claims like “I contributed to >50 GitHub commits” or “I participated in DAO governance” without revealing their full activity history.
+This enables DAOs, employers, and Web3 projects to verify trustworthiness while preserving user privacy.
+
+### SL Integration  
+Proof generation occurs locally by the user’s wallet.
+
+Soundness Layer (SL) is used for fast proof aggregation and verification.
+
+vApp smart contracts deployed on SL validate zk-proofs of identity/reputation.
+
+SL also ensures scalability by handling many proof submissions efficiently.
+
+## Technical
+
+### Architecture
+Credential Sources: GitHub, DAO voting records, on-chain activity.
+
+zk-Proof Generation: Users create zero-knowledge proofs locally.
+
+Soundness Layer Integration:
+
+Proofs submitted to SL verifier contracts.
+
+SL ensures proof validity and aggregates claims.
+
+User Flow:
+
+Connect wallet + GitHub/DAO account.
+
+zkID generates cryptographic commitments.
+
+User submits zk-proof via vApp.
+
+Verifier contract validates proof on SL.
+
+### Stack
+Frontend: React + Next.js
+
+Backend: Node.js + Rust for proof circuits
+
+Blockchain: Soundness Layer + Ethereum testnet
+
+Storage: IPFS for credential commitments
+
+### Features
+Privacy-preserving credential verification.
+
+zk-proofs of GitHub/DAO participation.
+
+On-chain verifier contract integrated with SL.
+
+## Timeline
+
+PoC (2-4 weeks)
+
+ Define credential schemas
+
+ Implement proof generation & verification contracts
+
+ Basic React UI
+
+MVP (4-8 weeks)
+
+ Expand to multiple credential sources
+
+ Deploy zkID Passport demo dApp
+
+ User testing with DAO voting integration
+
+## Innovation
+Unlike traditional identity solutions that require revealing personal data, zkID Reputation Passport provides trust without exposure.
+It enables DAOs, DeFi, and hiring platforms to validate user contributions while protecting privacy — making it both secure and user-friendly.
+
+## Contact
+Preferred Contact: Discord (@udingaga)
+
+Updates: GitHub repo + Soundness Dev Discord
+
+**Checklist before submitting:**
+- [✓ ] All fields completed
+- [✓ ] GitHub username matches PR author  
+- [✓] SL integration explained
+- [✓] Timeline is realistic
