@@ -1,0 +1,80 @@
+# vApp Submission: [File Integrity Checker]
+
+## Verification
+```yaml
+github_username: "jasondev68"
+discord_id: "903206380482232371"
+timestamp: "2025-08-30"
+```
+
+## Developer
+- **Name**: jasondev
+- **GitHub**: @jasondev68
+- **Discord**: tigerdev68
+- **Experience**: Full-stack developer with experience in web3, file storage, and verification tools, game and web
+
+## Project
+
+### Name & Category
+- **Project**: File Integrity Checker
+- **Category**: infrastructure
+
+### Description
+What problem does your vApp solve? What does it do?
+A simple vApp that allows users to upload a file, automatically generates a cryptographic hash (SHA256), and stores its proof on Soundness Layer.
+This helps users verify that their files have not been tampered with, ensuring data integrity and trust.
+
+### SL Integration  
+How will you use Soundness Layer? What specific SL features?
+Use Soundness Layer to generate zero-knowledge proofs of file integrity.
+Verify that a file's hash matches the original without exposing the file itself.
+Store proof IDs for immutable verification.
+
+## Technical
+
+### Architecture
+High-level system design and approach
+Frontend: Web app for uploading files and displaying verification results.
+Backend: Service that computes file hash and interacts with Soundness Layer.
+Proof System: SL proof generation to ensure integrity without leaking data.
+Storage: Proofs stored via WALRUS/IPFS for persistence.
+
+### Stack
+- **Frontend**: Next.js + Tailwind
+- **Backend**: Node.js/Express
+- **Blockchain**: Soundness Layer
+- **Storage**: IPFS/WALRUS
+
+### Features
+1. Upload a file → generate SHA256 hash
+2. Submit hash to SL → get proof
+3. Verify file later by re-checking hash + proof
+4. Simple UI to display status: “Valid / Invalid”
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [ ] Basic functionality
+- [ ] SL integration
+- [ ] Simple UI
+
+### MVP (4-8 weeks)  
+- [ ] Full features
+- [ ] Production ready
+- [ ] User testing
+
+## Innovation
+What makes this unique? Why will people use it?
+Unlike traditional file checkers, this vApp integrates with zero-knowledge proofs via Soundness Layer, allowing anyone to prove file integrity without revealing the file itself. This makes it secure, verifiable, and privacy-preserving.
+
+## Contact
+Preferred contact method and where you'll share updates.
+1. email: ducsondeveloper@gmail.com
+2. X/discord: @tigerdev68
+
+
+**Checklist before submitting:**
+- [ ] All fields completed
+- [ ] GitHub username matches PR author  
+- [ ] SL integration explained
+- [ ] Timeline is realistic
