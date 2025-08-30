@@ -1,67 +1,77 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: [Dolphin Finance]
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "supernyx11"
+discord_id: "rifai#0759"
+timestamp: "2025-08-30"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: Ahmat Rifai
+- **GitHub**: @supernyx11
+- **Discord**: rifai#0759
+- **Experience**: Background in DeFi protocols, liquidity management, and smart contract development.
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: Dolphin Finance
+- **Category**: DeFi
 
 ### Description
-What problem does your vApp solve? What does it do?
+Dolphin Finance is a decentralized yield aggregator that combines real-world assets (RWAs) and on-chain DeFi strategies into one platform.
+It solves the problem of fragmented yield opportunities by giving users a single smart vault system where capital is automatically allocated into the best mix of DeFi protocols and tokenized RWAs (like treasuries, bonds, or stable yield products).
+
+With Dolphin Finance, users gain sustainable yield without having to manually move funds between protocols.
+
 
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+• SL Proofs ensure transparency of yield strategies (users can verify where their assets are deployed).
+• Identity & Reputation Layer for whitelisted access to RWA strategies.
+• Cross-chain Verification using SL to make strategies portable across ecosystems.
 
 ## Technical
 
 ### Architecture
-High-level system design and approach
+• Smart contracts manage vaults and allocate assets across strategies.
+• SL used for proof generation and transparent reporting.
+• Oracles fetch RWA pricing and yield rates.
+• Frontend dashboard for deposits, withdrawals, and performance tracking.
 
 ### Stack
-- **Frontend**: React/Vue/etc
-- **Backend**: Rust/Node.js/Python/etc  
-- **Blockchain**: SL + others
-- **Storage**: Database/WALRUS/IPFS/etc
+- **Frontend**: React + Next.js
+- **Backend**: Node.js microservices  
+- **Blockchain**: Soundness Layer (SL) + Ethereum + L2s
+- **Storage**: WALRUS/IPFS for strategy reports & performance proofs
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
-
+1.Smart Yield Vaults – automated allocation between DeFi + RWAs.
+2. Verifiable Proof-of-Yield – powered by SL for transparency. 
+3. Cross-Chain Access – deposit once, earn yield across multiple chains.
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
-
+- Basic vault contracts
+- SL proof integration
+- Dashboard for deposits/withdrawals
 ### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
+-  Multi-strategy allocation
+- RWA integrations
+- Full-featured performance analytics
 
 ## Innovation
-What makes this unique? Why will people use it?
-
+ •Blends RWAs + DeFi in one vault system → sustainable yield beyond Ponzi cycles.
+ •SL-powered verification → full transparency of strategies and returns.
+ •Cross-chain by design → users access opportunities without bridging risk.
 ## Contact
-Preferred contact method and where you'll share updates.
+Discord: @rifai#0759
+Twitter: @ahmatr_
+Telegram: rifaiahmat
 
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [√] All fields completed
+- [√] GitHub username matches PR author  
+- [√] SL integration explained
+- [√] Timeline is realistic
