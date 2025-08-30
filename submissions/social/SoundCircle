@@ -1,0 +1,25 @@
+# SoundCircle
+
+SoundCircle is a decentralized community board built on top of Soundness, where users can create small interest-based groups and share updates securely.
+
+## Why this project?
+Communities online are usually hosted on centralized platforms that can ban or censor groups anytime. SoundCircle provides a censorship-resistant alternative, ensuring every post and membership is verifiable through Soundness proofs.
+
+## Key Features
+- 🏘 **Community boards** – Users can create or join topic-based circles.  
+- 🔑 **Proof-based membership** – Each member is verified through Soundness, preventing fake accounts.  
+- 📢 **Immutable announcements** – Posts are permanently verifiable and cannot be altered retroactively.  
+- 🛡 **Privacy control** – Users can choose between public or members-only posts.  
+
+## Roadmap
+1. Build group creation and membership verification.  
+2. Enable post submission + retrieval linked to Soundness proofs.  
+3. Add privacy toggle (public / private).  
+4. Develop a minimal UI for browsing groups.  
+
+## Next Steps
+- Submit vApp to Soundness cockpit.  
+- Collect early feedback.  
+- Expand features like reactions, comments, and moderation tools.  
+
+---
