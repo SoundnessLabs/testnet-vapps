@@ -1,0 +1,86 @@
+# vApp Submission: [Soundness Quest (Casual Game)]
+
+## Verification
+```yaml
+github_username: "jasondev68"
+discord_id: "903206380482232371"
+timestamp: "2025-08-22"
+```
+
+## Developer
+- **Name**: jasondev
+- **GitHub**: @jasondev68
+- **Discord**: jason (@tigerdev68)
+- **Experience**: Indie developer with experience building mini-games and casual projects. Skilled in game logic, WebGL deployment, and backend integrations
+
+## Project
+
+### Name & Category
+- **Project**: Soundness Quest (Casual Game)
+- **Category**: gaming
+
+### Description
+Soundness Quest is a casual arcade game inspired by Flappy Bird.
+Players tap to fly through obstacles and aim for the highest score.
+The key innovation: all high scores are verified and proven on Soundness Layer, making cheating impossible
+What problem does your vApp solve? What does it do?
+Many casual games are easy to cheat by modifying scores or leaderboards.
+Soundness Quest provides a fun Flappy Bird–style game where every score is validated with zkProofs on the Soundness Layer, ensuring fairness and transparency
+
+### SL Integration  
+How will you use Soundness Layer? What specific SL features?
+Soundness Layer is used to generate and verify proofs of player scores.
+The game server calls the Soundness CLI after each match to produce a zkProof.
+These proofs are stored on-chain and power a transparent leaderboard.
+Optional use of NFT rewards will also be tied to SL verification
+
+## Technical
+
+### Architecture
+High-level system design and approach
+Frontend: Game client built with Unity/WebGL or Phaser.js.
+Backend: Node.js server for receiving scores and generating proofs.
+Soundness Integration: Calls Soundness Layer API to submit and verify proofs.
+Leaderboard: On-chain, publicly verifiable, with optional NFT rewards.
+
+### Stack
+- **Frontend**: Phaser.js / Unity (WebGL export)
+- **Backend**: Node.js
+- **Blockchain**: Soundness Layer
+- **Storage**: Database + WALRUS for score proofs
+
+### Features
+1. Fun, simple Flappy Bird–style gameplay
+2. On-chain leaderboard with zkProof validation
+3. NFT rewards for achievements and top players
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [ ] Build core gameplay (Flappy mechanics)
+- [ ] Connect backend and SL CLI for proof generation
+- [ ] Implement simple leaderboard UI
+
+### MVP (4-8 weeks)  
+- [ ] Add full leaderboard on-chain
+- [ ] Integrate NFT reward system
+- [ ] Launch public playtest
+
+## Innovation
+What makes this unique? Why will people use it?
+Unlike traditional casual games, Soundness Quest ensures score integrity with zkProofs.
+Players can trust the leaderboard without fear of cheating.
+It combines simple addictive gameplay with blockchain-backed fairness.
+
+## Contact
+Preferred contact method and where you'll share updates.
+Discord: @tigerdev68
+X: @tigerdev68
+GitHub: @jasondev68
+
+
+**Checklist before submitting:**
+- [X] All fields completed
+- [X] GitHub username matches PR author  
+- [X] SL integration explained
+- [X] Timeline is realistic
