@@ -1,1 +1,15 @@
-# Submissions for submissions/infrastructure category
+Consensus Mechanisms: These are the algorithms that ensure all nodes on the network agree on the state of the ledger. They are a critical part of the infrastructure. Examples include:
+
+Proof of Work (PoW): Requires computational power to solve complex puzzles, used by networks like Bitcoin.
+
+Proof of Stake (PoS): Requires validators to stake their cryptocurrency to participate in the consensus process, used by networks like Ethereum.
+
+Clusters: A group of nodes along with the supporting infrastructure to manage them effectively. A cluster can include:
+
+Load balancers: Distribute network traffic across multiple servers to improve performance.
+
+Failover protection: Ensures a node doesn't experience extended downtime by providing a backup system.
+
+Monitoring and alerting services: Keep track of the health and performance of the nodes.
+
+Container services: Package applications and their dependencies, making it easier to manage and deploy them across multiple clusters.
