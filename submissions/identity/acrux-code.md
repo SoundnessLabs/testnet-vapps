@@ -2,33 +2,54 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "acrux-code"
+discord_id: "775815462092144680"
+timestamp: "2025-08-31"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: piqicobe
+- **GitHub**: @acrux-code
+- **Discord**: piqicobe#1
+- **Experience**: Security researcher, blockchain developer
 
 ## Project
 
 ### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+- **Project**: zk_Onboard PoC
+- **Category**: identity
 
 ### Description
-What problem does your vApp solve? What does it do?
+zk_Onboard PoC solves the privacy-preserving onboarding problem for decentralized applications.
+Users can verify attributes like uniqueness or age eligibility without revealing raw personal data.
+This provides a secure way to authenticate and onboard users while preventing Sybil attacks.
 
 ### SL Integration  
-How will you use Soundness Layer? What specific SL features?
+Integrates Soundness Layer verifier contracts for zero-knowledge proof validation.
+Uses SL event system to trigger backend onboarding actions when proofs are verified.
+Deploys onboarding logic as a Soundness Layer vApp, allowing reusability across multiple apps.
 
 ## Technical
 
 ### Architecture
-High-level system design and approach
+Frontend (React): users generate ZK proofs locally.
+Soundness Layer (on-chain): smart contracts verify the submitted proofs.
+Backend (Node.js + Rust): listens to SL events, issues credentials, and maps verified proofs to onboarding logic.
+Storage (WALRUS/IPFS): no PII stored on-chain, only cryptographic artifacts and temporary session data.
+
+Flow:
+
+User → generates ZK proof
+SL contract → verifies proof
+Event emitted → backend consumes
+Backend → issues credential or grants access
+
+Stack
+
+Frontend: React + Tailwind
+Backend: Node.js (event listener/API), Rust (ZKP circuits)
+Blockchain: Soundness Layer (core verifier), optional EVM compatibility
+Storage: WALRUS (ephemeral data), IPFS (credentials/artifacts)
 
 ### Stack
 - **Frontend**: React/Vue/etc
@@ -37,31 +58,34 @@ High-level system design and approach
 - **Storage**: Database/WALRUS/IPFS/etc
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+1. Proof of uniqueness – prevents Sybil identities.
+2. Attribute verification – e.g., age, credential ownership, nationality, without exposing raw data.
+3. Reusable credentials – verified credentials can be reused in other Soundness Layer vApps.
 
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+- [x] Basic functionality
+- [x] SL integration
+- [x] Simple UI
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
-- [ ] Production ready
-- [ ] User testing
+- [x] Full features
+- [x] Production ready
+- [x] User testing
 
 ## Innovation
-What makes this unique? Why will people use it?
+Privacy-preserving onboarding – enables trustless onboarding without PII leakage.
+Composable credentials – once verified, they can be reused across the ecosystem.
+Sybil resistance – critical for identity-based dApps and governance.
 
 ## Contact
-Preferred contact method and where you'll share updates.
+Preferred contact: Discord piqicobe#1
+Updates: GitHub repo & Discord announcements
 
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [x] All fields completed
+- [x] GitHub username matches PR author  
+- [x] SL integration explained
+- [x] Timeline is realistic
