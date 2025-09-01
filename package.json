@@ -1,9 +1,0 @@
-{
-  "name": "testnet-vapps",
-  "version": "1.0.0",
-  "description": "Soundness Layer testnet vApp submissions",
-  "scripts": {
-    "validate": "node scripts/validate.js"
-  },
-  "license": "MIT"
-}
