@@ -1,0 +1,73 @@
+# vApp Submission: DeFi Micro-Payments
+
+## Verification
+```yaml
+github_username: "avvair"
+discord_id: "1211736902491701318"
+timestamp: "2025-09-01"
+```
+
+## Developer
+- **Name**: Avva
+- **GitHub**: @avvair
+- **Discord**: 0xavva
+- **Email**: 0xavva@gmail.com
+- **Experience**: Full-stack developer with experience in Rust, React, and smart contracts. Interested in building scalable and privacy-preserving blockchain solutions.
+
+## Project
+
+### Name & Category
+- **Project**: DeFi Micro-Payments
+- **Category**: defi
+
+### Description
+A cross-border micro-payment platform with low fees powered by Soundness Layer.  
+Target users are content creators and developers who need to receive global payments without incurring high transaction costs.
+
+### SL Integration  
+- Use zkApp for privacy-preserving transaction verification.  
+- Submit proofs to Soundness Layer for transaction validation.  
+- Leverage Soundness Layer testnet as the settlement layer.
+
+## Technical
+
+### Architecture
+Frontend (React) → Backend API (Node.js/Rust) → Payment Engine → Soundness Layer zkProof Validation → Storage (IPFS/WALRUS)
+
+### Stack
+- **Frontend**: React + Tailwind  
+- **Backend**: Node.js + Rust modules  
+- **Blockchain**: Soundness Layer testnet  
+- **Storage**: IPFS/WALRUS for metadata
+
+### Features
+1. Walletless onboarding for non-crypto users  
+2. Micro-payment channel with zkProof  
+3. Real-time transaction dashboard  
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [ ] Basic integration with SL testnet  
+- [ ] Micro-payment prototype  
+- [ ] Simple React UI  
+
+### MVP (4-8 weeks)  
+- [ ] Multi-wallet support  
+- [ ] Full analytics dashboard  
+- [ ] User testing and feedback  
+
+## Innovation
+Provides a global micro-payment solution with extremely low fees, addressing the high-cost issues of traditional blockchains and fiat systems.
+
+## Contact
+- Discord: 0xavva  
+- Email: 0xavva@gmail.com
+
+---
+
+**Checklist before submitting:**
+- [x] All fields completed  
+- [x] GitHub username matches PR author  
+- [x] SL integration explained  
+- [x] Timeline is realistic
