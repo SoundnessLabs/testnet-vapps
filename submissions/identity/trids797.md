@@ -2,15 +2,15 @@
 
 ## Verification
 ```yaml
-github_username: "example-user"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "trids797"
+discord_id: "733681584690954340"
+timestamp: "2025-09-02"
 ```
 
 ## Developer
-- **Name**: Example Developer
-- **GitHub**: @example-user
-- **Discord**: example#1234
+- **Name**: trids
+- **GitHub**: @trids797
+- **Discord**: tri6555
 - **Experience**: 3 years Web3, identity systems
 
 ## Project
@@ -46,12 +46,12 @@ SL smart contracts coordinate identity verification across chains. ZK proofs ena
 ### PoC (3 weeks)
 - [x] SL identity contract
 - [x] Basic frontend
-- [ ] Cross-chain verification
+- [x] Cross-chain verification
 
 ### MVP (6 weeks)
-- [ ] Full verification system
+- [x] Full verification system
 - [ ] API for developers
-- [ ] Mobile support
+- [x] Mobile support
 
 ## Innovation
 First identity system using SL for true cross-chain coordination with privacy preservation.
