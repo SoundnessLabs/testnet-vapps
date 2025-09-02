@@ -22,4 +22,4 @@ This game provides entertainment while also offering logical challenges that are
 - Week 4: Community testing & feedback collection.  
 
 ## Additional Notes
-The goal of this proposal is to enrich the gaming variety within the Soundness ecosystem through a simple yet valuable community-driven game.
+The goal of this proposal is to enrich the gaming variety within the Soundness ecosystem through a simple yet valuable community-driven game
