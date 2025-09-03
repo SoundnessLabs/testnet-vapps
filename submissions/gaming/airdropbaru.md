@@ -66,7 +66,7 @@ Web Game Interface → Puzzle Solving → Proof Generation (SL) → Verification
 Brings zero-knowledge proofs to casual gaming, allowing players to prove puzzle solutions without spoilers. Creates new possibilities for competitive puzzle solving with verifiable but private solutions.
 
 ## Contact
-Discord: sinunu182. Will share progress in Soundness Discord and maintain GitHub repository with regular updates.
+Discord: airdropbarujp. Will share progress in Soundness Discord and maintain GitHub repository with regular updates.
 
 **Checklist before submitting:**
 - [x] All fields completed
