@@ -1,9 +1,11 @@
 {
-  "name": "testnet-vapps",
-  "version": "1.0.0",
-  "description": "Soundness Layer testnet vApp submissions",
+  "name": "soundness-poc",
+  "private": true,
   "scripts": {
-    "validate": "node scripts/validate.js"
+    "dev": "concurrently -k -n API,APP \"npm --prefix api run dev\" \"npm --prefix app run dev\"",
+    "test": "npm --prefix api test"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
 }

@@ -1,0 +1,6 @@
+// circuits/age_proof.circom
+template AgeProof() {
+    signal private input birthYear;
+    signal public output isOver18;
+    isOver18 <== (2025 - birthYear) > 18;
+}

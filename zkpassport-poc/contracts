@@ -1,0 +1,7 @@
+// contracts/Issuer.sol
+contract Issuer {
+    mapping(address => bytes32) public credentials;
+    function issueCredential(address user, bytes32 hash) external {
+        credentials[user] = hash;
+    }
+}

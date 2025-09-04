@@ -1,0 +1,16 @@
+Use React + Tailwind for the dApp in frontend/
+
+// frontend/src/components/VerifyAge.js
+const VerifyAge = () => {
+  const [proofValid, setProofValid] = useState(false);
+  const generateProof = async () => {
+    const result = await fetch('/api/generate-proof');
+    setProofValid(result.isValid);
+  };
+  return (
+    <div className="p-4 bg-gray-800 text-white">
+      <button onClick={generateProof}>Generate Proof</button>
+      {proofValid && <p>✅ Proof Valid</p>}
+    </div>
+  );
+};

@@ -1,0 +1,11 @@
+{
+  "name": "soundness-poc",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -n API,APP \"npm --prefix api run dev\" \"npm --prefix app run dev\"",
+    "test": "npm --prefix api test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
