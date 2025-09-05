@@ -1,0 +1,66 @@
+# vApp Submission: CryptoFlow
+
+## Verification
+```yaml
+github_username: "0xfahmi"
+discord_id: "786936746818535465"
+timestamp: "2025-09-05"
+```
+
+## Developer
+- **Name**: Fahmi M
+- **GitHub**: @0xfahmi
+- **Discord**: 0xfahmi
+- **Experience**: Full-stack developer with 3 years experience in web3 and blockchain integrations.
+
+## Project
+
+### Name & Category
+- **Project**: CryptoFlow
+- **Category**: defi
+
+### Description
+CryptoFlow is a decentralized finance platform that simplifies liquidity management and yield optimization. Users can easily provide liquidity, swap assets, and track their yields across multiple protocols in a single interface, solving fragmented DeFi experiences.
+
+### SL Integration
+We will use Soundness Layer (SL) for secure transaction verification and on-chain proofs. SL features like zk-proof integration and verifiable execution ensure trustless and secure interactions for users while maintaining privacy.
+
+## Technical
+
+### Architecture
+CryptoFlow uses a client-server architecture where the frontend interacts with user wallets for transactions. The backend communicates with SL for proof verification and coordinates liquidity operations across different DeFi protocols. All sensitive data is encrypted and stored off-chain.
+
+### Stack
+- **Frontend**: React, TailwindCSS
+- **Backend**: Node.js (Express)
+- **Blockchain**: Soundness Layer + Ethereum
+- **Storage**: PostgreSQL for user data, IPFS for optional off-chain encrypted data
+
+### Features
+1. Multi-protocol liquidity management
+2. Yield optimization engine
+3. zk-proof based transaction verification
+
+## Timeline
+
+### PoC (2-4 weeks)
+- [x] Basic functionality
+- [x] SL integration
+- [x] Simple UI
+
+### MVP (4-8 weeks)
+- [x] Full features
+- [x] Production ready
+- [x] User testing
+
+## Innovation
+CryptoFlow stands out by combining privacy-preserving proofs with a seamless DeFi experience. Users can optimize yields and manage assets across protocols securely without trusting centralized intermediaries.
+
+## Contact
+Preferred contact method: Discord 0xfahmi#7869. Updates will be shared via GitHub repository and Discord.
+
+**Checklist before submitting:**
+- [x] All fields completed
+- [x] GitHub username matches PR author  
+- [x] SL integration explained
+- [x] Timeline is realistic
