@@ -2,28 +2,47 @@
 
 ## Verification
 ```yaml
-github_username: "your-username"
-discord_id: "123456789012345678"
-timestamp: "2025-01-15"
+github_username: "habeebe600"
+discord_id: "790912314286931979"
+timestamp: "2025-09-08"
 ```
 
 ## Developer
-- **Name**: Your Name
-- **GitHub**: @your-username
-- **Discord**: username#1234
-- **Experience**: Brief background
+- **Name**: Mohammed Abdul Habeeb
+- **GitHub**: @habeebe600
+- **Discord**: abdulhabeeb
+- **Experience**: im a full stack developer, developed web2 and web3 websistes, also currently working on my own project.
 
 ## Project
-
-### Name & Category
-- **Project**: Your vApp Name
-- **Category**: identity/defi/social/gaming/infrastructure/other
+"https://flexify-learning.netlify.app/" this is the project im currently working on.
+### Name & Category 
+- **Project**: flexify-learning
+- **Category**: identity,social & other
 
 ### Description
-What problem does your vApp solve? What does it do?
+1. Student profile management and academic progress monitoring.
+2. Digitizing and automating school administrative tasks.
+3. Enhancing communication between parents and teachers.
+4. Automated notifications for important events like attendance, grading, and fee deadlines.
+5. Managing attendance, grading, fee payments, and student profiles efficiently.
+6. Providing a collaborative shared space for educational resources.
+7. Generating reports and notifications for better school management.
+8. Uploading and sharing educational resources such as lesson plans and study materials within the school.
+9. Customization of course structures, teacher assignments, and scheduling for optimized learning experiences.
 
 ### SL Integration  
 How will you use Soundness Layer? What specific SL features?
+1. For the enhancement of formal verification and correctness guarantees of the contracts for my games.
+
+2. Smart Contract Automation: Integrate smart contracts on Soundness Layer for automating grading, attendance, and reward distribution, reducing manual workflow and increasing transparency.the adding of formal methods to the existing toolkit of automated and manual checks to make the smart contract audit process more rigorous, efficient, and reliable
+
+3. Gamified Task Submission: Use Soundness Layer’s gaming capabilities to create interactive games where students complete educational tasks or quizzes by playing. Each game victory could reward students with incentives or unlock new learning resources, motivating active participation.
+
+4. Secure Task Verification: Employ Soundness Layer’s decentralized proof verification for validating task submissions to ensure authenticity and prevent tampering, improving trustworthiness in student assessments.
+
+5. Decentralized Data Storage: Utilize the associated decentralized storage network (such as Walrus in Soundness Layer) to securely store educational content, records, and submissions with integrity verification.
+
+6. Enhanced Parental and Teacher Trust: With blockchain-based verification, parents and teachers would gain increased confidence in the integrity and accuracy of student progress and communications.
 
 ## Technical
 
@@ -37,31 +56,33 @@ High-level system design and approach
 - **Storage**: Database/WALRUS/IPFS/etc
 
 ### Features
-1. Core feature 1
-2. Core feature 2  
-3. Core feature 3
+1. Gamified Learning and Task Completion
+2. Decentralized Verification and Security 
+3. Smart Contract Automation for Educational Processes
 
 ## Timeline
 
 ### PoC (2-4 weeks)
-- [ ] Basic functionality
-- [ ] SL integration
-- [ ] Simple UI
+- [Y] Basic functionality
+- [Y] SL integration
+- [Y] Simple UI
 
 ### MVP (4-8 weeks)  
-- [ ] Full features
+- [Y] Full features
 - [ ] Production ready
-- [ ] User testing
+- [Y] User testing
 
 ## Innovation
-What makes this unique? Why will people use it?
+yeah people will use it and i feel like it will be more unique if i make it web3.
 
 ## Contact
 Preferred contact method and where you'll share updates.
+email: habeebabdul600@gmail.com
+X: @Habeebsol
 
 
 **Checklist before submitting:**
-- [ ] All fields completed
-- [ ] GitHub username matches PR author  
-- [ ] SL integration explained
-- [ ] Timeline is realistic
+- [Y] All fields completed
+- [Y] GitHub username matches PR author  
+- [Y] SL integration explained
+- [Y] Timeline is realistic
