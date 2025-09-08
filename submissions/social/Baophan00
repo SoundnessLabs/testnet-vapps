@@ -1,0 +1,132 @@
+# vApp Submission: Trustless Twitter Raffle
+
+## Verification
+```yaml
+github_username: "Baophan00"
+discord_id: "987714782759108638"
+timestamp: "2025-09-08"
+```
+
+## Developer
+- **Name**: Bao Phan
+- **GitHub**: @Baophan00
+- **Discord**: baophan0123
+- **Experience**: Web developer with interest in blockchain and zero-knowledge applications. Experience in JavaScript/TypeScript and smart contract development.
+
+## Project
+
+### Name & Category
+- **Project**: Trustless Twitter Raffle
+- **Category**: social
+
+### Description
+This vApp solves the problem of trust in social media giveaways and raffles. Currently, participants must trust that organizers will select winners fairly and transparently. Our solution provides a completely trustless system that automatically verifies Twitter engagement (likes, retweets, comments) and uses verifiable random selection to choose winners, with all results proven on-chain via Soundness Layer.
+
+### SL Integration
+**Soundness Layer Features Used:**
+- **SP1 Proofs**: Generate ZK proofs that verify Twitter engagement data and random selection algorithm without revealing individual participant data
+- **Cost-effective Verification**: Use Soundness Layer's efficient verification system to validate raffle fairness on-chain
+- **Sui Integration**: Deploy smart contracts on Sui blockchain for result storage and NFT minting
+- **zk-Onboard**: Enable easy participation for Web2 Twitter users without requiring crypto knowledge
+- **Privacy & Compliance**: Ensure Twitter data processing complies with privacy regulations
+
+**Specific SL Implementation:**
+1. **Off-chain Computation**: Use SP1 circuits to process Twitter API data and identify eligible participants
+2. **ZK Proof Generation**: Create proofs that verify participant list and random selection were executed correctly
+3. **On-chain Verification**: Use Soundness Layer verifier to validate proofs on Sui blockchain
+4. **Transparent Results**: Store verified winner selection immutably on-chain
+
+## Technical
+
+### Architecture
+```
+Twitter API → Data Processing → SP1 Circuit → ZK Proof Generation → 
+Soundness Layer Verification → Sui Smart Contract → NFT Minting
+```
+
+**Flow:**
+1. Organizer inputs Twitter post URL
+2. System fetches engagement data via Twitter API
+3. SP1 circuit processes eligibility and performs random selection
+4. Soundness Layer generates and verifies ZK proof
+5. Sui smart contract stores results and mints verification NFT
+
+### Stack
+- **Frontend**: React + TypeScript + Sui wallet integration
+- **Backend**: Node.js + Twitter API v2 integration
+- **Blockchain**: Soundness Layer + Sui blockchain (NOT Ethereum)
+- **ZK**: SP1 circuits for engagement verification and random selection
+- **Storage**: IPFS for NFT metadata + Sui for on-chain data
+
+### Features
+1. **Twitter Engagement Verification**: Automatically verify likes, retweets, comments via ZK proofs
+2. **Provably Fair Random Selection**: Use verifiable randomness with ZK proof of correct execution
+3. **Sui-based Result Storage**: Immutable raffle results stored on Sui blockchain
+4. **Verification NFTs**: Mint NFTs on Sui as proof of fair raffle execution
+5. **Privacy-Preserving**: Prove fairness without revealing individual participant data
+6. **Cross-platform Integration**: Support multiple social platforms through Soundness ecosystem
+
+## Timeline
+
+### PoC (2-3 weeks)
+- [x] Twitter API integration and data fetching
+- [x] Basic SP1 circuit for participant verification
+- [x] Simple random selection algorithm with ZK proof
+- [x] Soundness Layer integration setup
+- [x] Minimal React frontend for testing
+
+### MVP (4-6 weeks)
+- [ ] Complete SP1 circuit optimization for Twitter data processing
+- [ ] Full Soundness Layer integration with proof verification
+- [ ] Sui smart contracts for result storage and NFT minting
+- [ ] Enhanced UI with Sui wallet connection
+- [ ] Privacy controls and compliance features
+- [ ] Testnet deployment on Sui
+- [ ] Beta testing with real Twitter raffles
+- [ ] Security audit and optimization
+
+## Innovation
+
+### What Makes This Unique:
+1. **First ZK-Verified Social Raffles**: Brings mathematical proof of fairness to social media giveaways
+2. **Privacy-Preserving Transparency**: Prove fairness without exposing participant privacy
+3. **Web2-Web3 Bridge**: Twitter users can participate without crypto knowledge via zk-Onboard
+4. **Soundness Ecosystem Integration**: Leverages full Soundness stack for optimal performance
+5. **Sui-Native Implementation**: Built specifically for Sui's parallel execution and low fees
+
+### Why People Will Use It:
+- **Trust Issue Resolution**: Eliminates need to trust raffle organizers
+- **Regulatory Compliance**: Built-in privacy protections for social media data
+- **Easy Participation**: Web2 users can participate without crypto wallets
+- **Verifiable Results**: Mathematical proof that selection was fair
+- **Cost Effective**: Sui's low fees make micro-raffles economically viable
+
+### Market Opportunity:
+- Billions of social media users participate in giveaways
+- Growing demand for transparency in influencer marketing
+- Regulatory pressure for fair promotional practices
+- Web3 projects need trustworthy community engagement tools
+
+## Contact
+- **Primary**: Discord @baophan0123
+- **Secondary**: GitHub @Baophan00
+- **Code**: Open source development with public GitHub repository
+
+---
+
+**Major Corrections Made:**
+1. ✅ **Blockchain Platform**: Changed from Ethereum to Sui (Soundness Layer primary platform)
+2. ✅ **Date**: Updated timestamp to current date (2025-09-08)
+3. ✅ **SL Integration**: Added specific Soundness features (SP1, zk-Onboard, Privacy & Compliance)
+4. ✅ **Technical Stack**: Corrected to use Sui instead of Ethereum
+5. ✅ **Architecture**: Added proper SP1 circuit flow
+6. ✅ **Innovation**: Enhanced with Soundness ecosystem benefits
+7. ✅ **Timeline**: Made more realistic with Sui development considerations
+
+**Checklist:**
+- [x] All fields completed with accurate information
+- [x] GitHub username matches (Baophan00)
+- [x] SL integration clearly explained with specific features
+- [x] Timeline is realistic (5-9 weeks total)
+- [x] Corrected blockchain platform to Sui
+- [x] Added privacy and compliance considerations
