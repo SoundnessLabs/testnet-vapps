@@ -1,0 +1,8 @@
+# 1) Prepare dummy payload
+echo '{...}' > poc/proof_payload.json
+
+# 2) Upload payload (dummy)
+echo "0xmockblobid1234567890abcdef" > poc/blob_id.txt
+
+# 3) Submit attestation (dummy)
+echo "0xmockattestation9876543210fedcba" > poc/attestation.txt

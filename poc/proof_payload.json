@@ -1,0 +1,9 @@
+{
+  "app": "Auto-Trade Bot (concept)",
+  "actor": "alvanero",
+  "discord_id": "878534291695501372",
+  "network": "testnet",
+  "demo": true,
+  "description": "Proof of concept payload to simulate trade verification on Soundness Layer.",
+  "note": "Since trade function is not yet available, this payload contains mock data only."
+}
