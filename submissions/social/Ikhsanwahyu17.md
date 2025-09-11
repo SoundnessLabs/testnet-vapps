@@ -2,7 +2,7 @@
 
 ## Applicant Information
 - **GitHub Username**: Ikhsanwahyu17
-- **Discord ID**: [Masukkan Discord ID Anda, misal: Ikhsan#9012]
+- **Discord ID**: nabastala_a
 
 ## Proposal Details
 ### vApp Name
