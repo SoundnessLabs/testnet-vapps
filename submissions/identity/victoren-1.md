@@ -1,4 +1,4 @@
-# vApp Submission: [Your Project Name]
+# vApp Submission: [ Ehco+ ]
 
 ## Verification
 ```yaml
@@ -106,7 +106,7 @@ High-level system design and approach
 
 
 ## Contact
-email: ekumanzubechi97@gmail.com
+## email: ekumanzubechi97@gmail.com
 
 
 **Checklist before submitting:**
