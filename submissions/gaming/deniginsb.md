@@ -13,7 +13,7 @@ GitHub: @deniginsb
 
 Discord: 622368860787572746
 
-Experience: 10+ years experience in Web3 and coding. Built blockchain games, wallet analytics, and AI-powered apps with focus on zk and on-chain interactivity.
+Experience: 2+ years experience in Web3 and coding. Built blockchain games, wallet analytics, and AI-powered apps with focus on zk and on-chain interactivity.
 
 Project
 
