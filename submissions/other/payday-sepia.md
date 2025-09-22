@@ -2,7 +2,7 @@
 
 ## Verification
 ```yaml
-github_username: "ygarov."
+github_username: "payday-sepia"
 discord_id: "957480972922810410"
 timestamp: "2025-09-22"
 ```
