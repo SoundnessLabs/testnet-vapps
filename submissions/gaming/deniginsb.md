@@ -2,7 +2,8 @@ vApp Submission: zk-Trivia Game
 
 Verification
 
-github_username: "deniginsb" discord_id: "your-discord-id-here" timestamp: "2025-09-22" 
+github_username: deniginsb discord_id: 622368860787572746 timestamp: "
+2025-09-22 
 
 Developer
 
