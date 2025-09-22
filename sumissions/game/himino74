@@ -1,0 +1,73 @@
+# vApp Submission: QuestChain
+
+## Verification
+```yaml
+github_username: "himino74"
+discord_id: "nadu7744"
+timestamp: "2025-09-23"
+```
+
+## Developer
+- **Name**: Taro
+- **GitHub**: @himino74
+- **Discord**: nadu7744
+- **Experience**: Web3 community participant with background in game design and player engagement. Interested in combining social incentives with blockchain-based achievements.
+
+## Project
+
+### Name & Category
+- **Project**: QuestChain
+- **Category**: gaming/social
+
+### Description
+QuestChain is a play-to-reputation quest system where players complete challenges (on-chain or off-chain) and earn verifiable badges.
+
+It solves the problem of low engagement in community games and DAOs: most quests today are limited to simple tasks (Twitter likes, Discord joins) and lack meaningful recognition. QuestChain introduces long-term quests with reputation scores, rewarding real contributions instead of superficial actions.
+
+### SL Integration  
+Every quest completion is issued as a Soundness Layer credential.
+Credentials represent verifiable achievements (“Completed DAO governance quest,” “Beat level in community game,” “Hosted event”).
+Reputation points are stored in SL and portable across ecosystems, so players can prove their engagement when joining DAOs or guilds.
+
+## Technical
+
+### Architecture
+Quest creators define challenges (DAO missions, game tasks).
+Players complete quests → proof submitted.
+SL issues credentials tied to user wallets.
+Reputation dashboard displays quest history + cumulative scores.
+
+### Stack
+Frontend: Next.js + Tailwind
+Backend: Node.js with quest validation API
+Blockchain: SL for credential issuance, optional Polygon for reward tokens
+Storage: IPFS for quest data, WALRUS for off-chain proofs
+
+### Features
+Customizable quests (game levels, governance actions, social tasks)
+Portable reputation badges (SL credentials)
+Leaderboards and seasonal rankings to encourage competition
+
+## Timeline
+
+### PoC (2-4 weeks)
+Quest creation & completion flow
+SL credential issuance for first quests
+Simple player profile UI
+
+### MVP (4-8 weeks)  
+Multi-type quest support (on-chain + off-chain)
+Reputation scoring system with SL validation
+Leaderboards + seasonal quest campaigns
+
+## Innovation
+Unlike typical quest platforms that only drive short-term farming, QuestChain emphasizes verifiable, reputation-based progression. Players not only get rewards, but also build a lasting on-chain profile of achievements, bridging gaming and DAO participation.
+
+## Contact
+Github:@himino74
+
+**Checklist before submitting:**
+- [ ] All fields completed
+- [ ] GitHub username matches PR author  
+- [ ] SL integration explained
+- [ ] Timeline is realistic
