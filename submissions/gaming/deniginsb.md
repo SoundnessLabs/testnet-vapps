@@ -1,9 +1,10 @@
-vApp Submission: zk-Trivia Game
+# vApp Submission: zk-Trivia Game
 
-Verification
-
-github_username: deniginsb discord_id: 622368860787572746 timestamp: "
-2025-09-22 
+## Verification
+```yaml
+github_username: "deniginsb"
+discord_id: "622368860787572746"
+timestamp: "2025-09-22"
 
 Developer
 
@@ -11,9 +12,10 @@ Name: Deni Ardiansyah
 
 GitHub: @deniginsb
 
-Discord: 622368860787572746
+Discord: deniajaa10
 
 Experience: 2+ years experience in Web3 and coding. Built blockchain games, wallet analytics, and AI-powered apps with focus on zk and on-chain interactivity.
+
 
 Project
 
@@ -22,6 +24,7 @@ Name & Category
 Project: zk-Trivia Game
 
 Category: gaming
+
 
 Description
 
@@ -39,6 +42,7 @@ Leaderboard queries WALRUS + Soundness to verify validity before showing results
 
 Prevents score manipulation and enables transparent competitions.
 
+
 Technical
 
 Architecture
@@ -53,6 +57,7 @@ Storage: WALRUS stores proof + attested score.
 
 Leaderboard UI: fetches verified scores to display rankings.
 
+
 Stack
 
 Frontend: React + Tailwind (minimalist dark theme with neon accents)
@@ -63,17 +68,24 @@ Blockchain: Soundness Layer (zk proofs + attestations)
 
 Storage: WALRUS decentralized storage
 
+
 Features
 
-Trivia questions with timer (10–20s per question).
+1. Trivia questions with timer (10–20s per question).
 
-Score submission with zkProof verification.
 
-Attestation badge for valid scores.
+2. Score submission with zkProof verification.
 
-Global leaderboard (only verified scores count).
 
-Optional multiplayer rounds or tournaments.
+3. Attestation badge for valid scores.
+
+
+4. Global leaderboard (only verified scores count).
+
+
+5. Optional multiplayer rounds or tournaments.
+
+
 
 Timeline
 
@@ -87,6 +99,7 @@ PoC (2–4 weeks)
 
 [ ] Basic leaderboard display
 
+
 MVP (4–8 weeks)
 
 [ ] Full leaderboard with filters & badges
@@ -96,6 +109,7 @@ MVP (4–8 weeks)
 [ ] Polished dark-themed UI with animations
 
 [ ] Multi-round tournaments + user testing
+
 
 Innovation
 
@@ -110,6 +124,10 @@ Discord: deniajaa10
 GitHub: @deniginsb
 Preferred updates via GitHub PRs and Soundness Discord.
 
+
+
+---
+
 Checklist before submitting:
 
 [x] All fields completed
@@ -119,5 +137,3 @@ Checklist before submitting:
 [x] SL integration explained
 
 [x] Timeline is realistic
-
-622368860787572746
