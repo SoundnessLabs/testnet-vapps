@@ -37,10 +37,10 @@ The protocol leverages the Soundness Layer (SL) for ZK-backed integrity and iden
 
 ## Core Problems Solved
 Problem	Description
-High Gas Fees	On-chain fees often exceed small transaction values (micropayments).
-Cross-Chain Risk	Users paying from other chains face high friction and security risks via unsafe bridges.
-Liquidity Issues	Merchants have trouble converting crypto to fiat on demand.
-Complicated UX	Setting network, token approval, and understanding slippage confuse non-crypto-native users.
+1.High Gas Fees	On-chain fees often exceed small transaction values (micropayments).
+2.Cross-Chain Risk	Users paying from other chains face high friction and security risks via unsafe bridges.
+3.Liquidity Issues	Merchants have trouble converting crypto to fiat on demand.
+4.Complicated UX	Setting network, token approval, and understanding slippage confuse non-crypto-native users.
 
 ## Solutions
 Solution	Description
@@ -50,12 +50,12 @@ Solution	Description
 4.Transaction Batching	Combine multiple steps (approval, payment, conversion) into one low-gas tx.
 5.One-Click Pay UX	No wallet switching or approvals—Pay with crypto like you would with a credit card.
 6.ZK Identity Proofs	Prevent Sybil abuse of merchant incentive programs or cashback rewards.
-## SL Integration
+
+
+
 
 ## SL Integration
-
 PaySage integrates Soundness Layer in the following modules:
-
 1.ZK Payment Proofs: Ensure valid payment without revealing amount/source
 2.ZK Identity: Users can prove uniqueness (for rewards/referrals) without linking wallets or KYC
 3.WALRUS Commitments: Store encrypted proofs for merchant settlement & auditability
@@ -104,47 +104,45 @@ Architecture Overview
 
 ### SL SDK
 ZK circuits for:
-
 1.Valid payment proofs
 2.Identity uniqueness
 3.Proof aggregation to minimize latency & cost
 
 
 ### Sui Contract
-Payment Router: Accepts payment, verifies proof
-Stablecoin Wrapper: Swap crypto → IDRT (or other local stablecoin)
-Merchant Settlement: Auto-convert to fiat or hold in stablecoin
+1.Payment Router: Accepts payment, verifies proof
+2.Stablecoin Wrapper: Swap crypto → IDRT (or other local stablecoin)
+3.Merchant Settlement: Auto-convert to fiat or hold in stablecoin
 
 ---
 
 Example Flow: Crypto to Fiat Payment
-User scans merchant QR → opens PaySage
-Pays with crypto from any supported chain (via SL bridge)
-SL SDK generates proof of valid payment + user uniqueness
-Payment routed on Sui → converted to IDR Token (IDRT)
-Merchant receives IDRT or fiat to bank account
-Proof stored via WALRUS for auditability
+1.User scans merchant QR → opens PaySage
+2.Pays with crypto from any supported chain (via SL bridge)
+3.SL SDK generates proof of valid payment + user uniqueness
+4.Payment routed on Sui → converted to IDR Token (IDRT)
+5.Merchant receives IDRT or fiat to bank account
+6.Proof stored via WALRUS for auditability
 ---
 
 
 
 ## Timeline
 Phase 1: PoC (2–4 Weeks)
-Deploy payment router + IDRT wrapper on Sui testnet
-Integrate SL proofs (ZK payment & identity)
-Build Pay UI (wallet connect, QR pay)
+1.Deploy payment router + IDRT wrapper on Sui testnet
+2.Integrate SL proofs (ZK payment & identity)
+3.Build Pay UI (wallet connect, QR pay)
 
 Phase 2: MVP (4–8 Weeks)
-Support multiple chains via SL bridge
-Add fiat off-ramp (merchant withdrawal to bank/e-wallet)
-Launch merchant onboarding & rewards campaign
-Enable WALRUS commitments + reward proofs
+1.Support multiple chains via SL bridge
+2.Add fiat off-ramp (merchant withdrawal to bank/e-wallet)
+3.Launch merchant onboarding & rewards campaign
+4.Enable WALRUS commitments + reward proofs
 
 
 
 ## Innovation
 PaySage bridges the gap between on-chain assets and real-world payments through:
-
 1. One-click crypto-to-fiat payments
 2. Local stablecoin rails (IDRT or similar)
 3. SL-backed privacy and Sybil-resistance
