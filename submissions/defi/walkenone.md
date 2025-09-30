@@ -6,7 +6,7 @@
 - **GitHub:** @walkenone  
 - **Discord:** walken#1234 (ID: 938485146322092134)  
 - **Experience:**  
-  Smart contract developer and DeFi builder with experience on Sui and EVM chains. Focused on privacy-first finance and protocol-level innovation. Previous contributor to Sui lending markets and zk tooling.
+  Smart contract developer and DeFi builder with experience on Sui and EVM chains. Focused on privacy-first finance and protocol-level innovation. Previous contributor to Sui staking .
 
 - **Submission Timestamp:** 2025-08-22
 
