@@ -1,36 +1,10 @@
-## Samba-SocialTicket vApp Proposal
-
-## Project Information
-
-- **Project Name:** Samba-SocialTicket
-- **Category:** social
-- **GitHub Username:** pichanesantana-cloud
-- **Discord ID:** @r3nato7732
-- **Team Size:** 3 (Developer)
-
-## Project Overview
-
-### Description
-Samba-SocialTicket is a decentralized social ticketing platform that leverages blockchain technology and Soundness Layer's zero-knowledge proof (ZK) verification to create transparent, secure, and community-driven event management. The platform enables users to create, distribute, and manage event tickets while building social reputation through verified attendance and community interactions, all enhanced by Soundness Layer's trustless attestation system.
-
-### Key Features
-- **Decentralized Event Creation:** Users can create events with smart contract-backed tickets.
-- **Social Verification:** Attendance verification using ZK proofs via Soundness Layer.
-- **Reputation System:** Privacy-preserving reputation based on event history, verified by Soundness Layer.
-- **NFT Ticketing:** Each ticket is an NFT with unique properties and transferability rules.
-- **Community Governance:** Event organizers and attendees participate in dispute resolution.
-
-## Technical Architecture
-
-### Core Components
-
-#### 1. Smart Contracts (Move Language)
-```move
 // Simplified contract structure with Soundness Layer integration
-module samba_tickets::event_manager {
+
+
+        module samba_tickets::event_manager {
     use sui::object::{Self, UID};
-    use sui::string::{Self, String};
-    use sui::tx_context::{Self, TxContext};
+      use sui::string::{Self, String};
+      use sui::tx_context::{Self, TxContext};
     use sui::transfer;
     use sui::event;
 
