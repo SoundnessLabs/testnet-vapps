@@ -1,24 +1,24 @@
-# Samba-SocialTicket vApp Proposal
+## Samba-SocialTicket vApp Proposal
 
 ## Project Information
 
-**Project Name:** Samba-SocialTicket  
-**Category:** social  
-**GitHub Username:** [pichanesantana-cloud]  
-**Discord ID:** [@r3nato7732]  
-**Team Size:** 3 (Developer)
+- **Project Name:** Samba-SocialTicket
+- **Category:** social
+- **GitHub Username:** pichanesantana-cloud
+- **Discord ID:** @r3nato7732
+- **Team Size:** 3 (Developer)
 
 ## Project Overview
 
 ### Description
-Samba-SocialTicket is a decentralized social ticketing platform that leverages blockchain technology to create transparent, secure, and community-driven event management. The platform enables users to create, distribute, and manage event tickets while building social reputation through verified attendance and community interactions.
+Samba-SocialTicket is a decentralized social ticketing platform that leverages blockchain technology and Soundness Layer's zero-knowledge proof (ZK) verification to create transparent, secure, and community-driven event management. The platform enables users to create, distribute, and manage event tickets while building social reputation through verified attendance and community interactions, all enhanced by Soundness Layer's trustless attestation system.
 
 ### Key Features
-- **Decentralized Event Creation:** Users can create events with smart contract-backed tickets
-- **Social Verification:** Attendance verification through community consensus and cryptographic proofs
-- **Reputation System:** Build and maintain social reputation based on event history and community interactions
-- **NFT Ticketing:** Each ticket is an NFT with unique properties and transferability rules
-- **Community Governance:** Event organizers and attendees participate in dispute resolution
+- **Decentralized Event Creation:** Users can create events with smart contract-backed tickets.
+- **Social Verification:** Attendance verification using ZK proofs via Soundness Layer.
+- **Reputation System:** Privacy-preserving reputation based on event history, verified by Soundness Layer.
+- **NFT Ticketing:** Each ticket is an NFT with unique properties and transferability rules.
+- **Community Governance:** Event organizers and attendees participate in dispute resolution.
 
 ## Technical Architecture
 
@@ -26,8 +26,15 @@ Samba-SocialTicket is a decentralized social ticketing platform that leverages b
 
 #### 1. Smart Contracts (Move Language)
 ```move
-// Simplified contract structure
+// Simplified contract structure with Soundness Layer integration
 module samba_tickets::event_manager {
+    use sui::object::{Self, UID};
+    use sui::string::{Self, String};
+    use sui::tx_context::{Self, TxContext};
+    use sui::transfer;
+    use sui::event;
+
+    // Structs for Events, Tickets, and Reputation
     struct Event has key, store {
         id: UID,
         creator: address,
@@ -37,14 +44,16 @@ module samba_tickets::event_manager {
         ticket_price: u64,
         event_date: u64,
         is_active: bool,
+        walrus_blob_id: String, // Reference to Walrus storage
     }
 
     struct Ticket has key, store {
         id: UID,
-        event_id: ID,
+        event_id: UID,
         owner: address,
         attendance_verified: bool,
         transfer_count: u8,
+        zk_proof_hash: String, // ZK proof hash from Soundness Layer
     }
 
     struct UserReputation has key {
@@ -53,151 +62,98 @@ module samba_tickets::event_manager {
         events_attended: u64,
         events_created: u64,
         reputation_score: u64,
+        zk_reputation_proof: String, // ZK proof for privacy-preserving reputation
+    }
+
+    // Event for logging
+    struct EventCreated has copy, drop {
+        event_id: ID,
+        creator: address,
+    }
+
+    // Function to create an event with Walrus metadata storage
+    public entry fun create_event(
+        title: vector<u8>,
+        description: vector<u8>,
+        max_capacity: u64,
+        ticket_price: u64,
+        event_date: u64,
+        walrus_blob_id: vector<u8>, // Metadata stored on Walrus
+        ctx: &mut TxContext
+    ) {
+        let event = Event {
+            id: object::new(ctx),
+            creator: tx_context::sender(ctx),
+            title: string::utf8(title),
+            description: string::utf8(description),
+            max_capacity,
+            ticket_price,
+            event_date,
+            is_active: true,
+            walrus_blob_id: string::utf8(walrus_blob_id),
+        };
+        event::emit(EventCreated {
+            event_id: object::uid_to_inner(&event.id),
+            creator: tx_context::sender(ctx),
+        });
+        transfer::share_object(event);
+    }
+
+    // Function to mint a ticket with Soundness Layer proof submission
+    public entry fun mint_ticket(
+        event: &mut Event,
+        ctx: &mut TxContext
+    ) {
+        assert!(event.is_active, 1); // Ensure event is active
+        let ticket = Ticket {
+            id: object::new(ctx),
+            event_id: object::uid_to_inner(&event.id),
+            owner: tx_context::sender(ctx),
+            attendance_verified: false,
+            transfer_count: 0,
+            zk_proof_hash: string::utf8(b""), // Placeholder, to be updated with ZK proof
+        };
+        // Simulate Soundness Layer proof submission (CLI call would be here)
+        // Example: soundness-cli submit-proof --blob-id <walrus_blob_id> --event-id <event_id>
+        transfer::transfer(ticket, tx_context::sender(ctx));
+    }
+
+    // Function to verify attendance with ZK proof
+    public entry fun verify_attendance(
+        ticket: &mut Ticket,
+        zk_proof: vector<u8>, // ZK proof submitted via Soundness Layer
+        ctx: &mut TxContext
+    ) {
+        assert!(!ticket.attendance_verified, 2); // Ensure not already verified
+        // Simulate Soundness Layer verification (CLI call would verify proof)
+        // Example: soundness-cli verify-proof --proof <zk_proof> --ticket-id <ticket_id>
+        ticket.attendance_verified = true;
+        ticket.zk_proof_hash = string::utf8(zk_proof);
+        // Update reputation (placeholder for ZK calculation)
+        let reputation = get_or_create_reputation(tx_context::sender(ctx), ctx);
+        reputation.events_attended = reputation.events_attended + 1;
+        reputation.reputation_score = reputation.reputation_score + 10; // Example scoring
+        reputation.zk_reputation_proof = string::utf8(zk_proof); // Privacy-preserving proof
+    }
+
+    // Helper to get or create user reputation
+    fun get_or_create_reputation(user: address, ctx: &mut TxContext): &mut UserReputation {
+        // Simplified logic, would need a global store in a real implementation
+        let reputation = UserReputation {
+            id: object::new(ctx),
+            user,
+            events_attended: 0,
+            events_created: 0,
+            reputation_score: 0,
+            zk_reputation_proof: string::utf8(b""),
+        };
+        transfer::share_object(reputation);
+        // Return reference (simplified)
+        &mut reputation
+    }
+
+    // Public function to retrieve event data (for Walrus integration)
+    public fun get_walrus_blob_id(event: &Event): String {
+        event.walrus_blob_id
     }
 }
-```
-
-#### 2. Soundness Layer Integration
-
-**Data Storage:**
-Utilizaremos o Walrus para armazenamento de dados off-chain, onde os usuários podem submeter requests ao Soundness Layer chamando a função new_proof no smart contract Move
-
-**Proof Submission:**
-- Event metadata stored on Walrus
-- Attendance proofs submitted via blob ID to Soundness Layer
-- Zero-knowledge proofs for privacy-preserving reputation calculations
-
-**Technical Integration Points:**
-1. **Event Metadata Storage:** Large event data (images, descriptions, media) stored on Walrus
-2. **Attendance Verification:** ZK proofs submitted to Soundness Layer for attendance verification
-3. **Reputation Calculations:** Privacy-preserving reputation scoring using zero-knowledge proofs
-4. **Data Integrity:** All event and ticket data verified through Soundness Layer's verification system
-
-### Architecture Flow
-```
-User Creates Event → Store metadata on Walrus → Deploy Move contract on Sui
-    ↓
-Ticket Purchase → NFT Minting → Store transaction proof on Soundness Layer
-    ↓
-Event Attendance → ZK Proof Generation → Submit to Soundness Layer
-    ↓
-Reputation Update → Privacy-preserving calculation → Update on-chain reputation
-```
-
-## Development Roadmap
-
-### Phase 1: Foundation (Weeks 1-4)
-- [x] Basic project structure setup
-- [x] Git repository initialization
-- [ ] Move smart contracts development
-- [ ] Soundness Layer CLI integration
-- [ ] Basic event creation functionality
-
-### Phase 2: Core Features (Weeks 5-8)
-- [ ] NFT ticketing system implementation
-- [ ] Walrus integration for metadata storage
-- [ ] ZK proof generation for attendance
-- [ ] Basic reputation system
-- [ ] Frontend development (React/Next.js)
-
-### Phase 3: Advanced Features (Weeks 9-12)
-- [ ] Community governance mechanisms
-- [ ] Advanced reputation algorithms
-- [ ] Mobile-responsive design
-- [ ] Payment integration
-- [ ] Testing and optimization
-
-### Phase 4: Testnet Deployment (Weeks 13-16)
-- [ ] Soundness Layer testnet deployment
-- [ ] Comprehensive testing
-- [ ] User feedback integration
-- [ ] Performance optimization
-- [ ] Security auditing
-
-## Business Model & Impact
-
-### Target Market
-- Event organizers (concerts, conferences, workshops)
-- Community builders and social groups
-- Verification-required events (professional conferences, exclusive gatherings)
-
-### Social Impact
-- **Transparency:** All ticket sales and transfers are publicly verifiable
-- **Anti-Fraud:** Blockchain-based tickets prevent counterfeiting
-- **Community Building:** Reputation system encourages positive community participation
-- **Decentralization:** Reduces dependency on centralized ticketing monopolies
-
-## Technical Specifications
-
-### Frontend
-- **Framework:** React/Next.js
-- **Styling:** Tailwind CSS
-- **Wallet Integration:** Sui Wallet, Ethos Wallet
-- **State Management:** Zustand
-
-### Backend/Blockchain
-- **Smart Contracts:** Move language on Sui Network
-- **Data Storage:** Walrus Protocol via Soundness Layer
-- **Verification:** Zero-Knowledge Proofs
-- **Authentication:** Sui Wallet signatures
-
-### Infrastructure
-- **Hosting:** Vercel/Netlify for frontend
-- **IPFS:** Backup metadata storage
-- **API:** Node.js/Express for auxiliary services
-
-## Proof of Concept Features
-
-### MVP (Minimum Viable Product)
-1. Create simple events with basic information
-2. Mint NFT tickets with unique identifiers
-3. Verify ticket ownership on-chain
-4. Basic attendance marking system
-5. Simple reputation display
-
-### Soundness Layer Specific Features
-- Event metadata storage on Walrus
-- ZK proof submission for attendance verification
-- Privacy-preserving reputation calculations
-- Blob ID-based proof verification
-
-## Testing Strategy
-
-1. **Unit Tests:** Smart contract functionality testing
-2. **Integration Tests:** Soundness Layer interaction testing
-3. **User Acceptance Tests:** Community-driven testing
-4. **Security Audits:** Smart contract security review
-5. **Performance Tests:** Scalability and gas optimization
-
-## Resources Needed
-
-### Technical Resources
-- Sui testnet tokens for smart contract deployment
-- Soundness Layer testnet access
-- Development tools and frameworks
-
-### Community Resources
-- Beta testers from event management communities
-- Feedback from Web3 social platform users
-- Integration partners for initial events
-
-## Success Metrics
-
-- **Technical:** Successful deployment and interaction with Soundness Layer
-- **Usage:** 10+ test events created during testnet phase
-- **Community:** 50+ active beta testers
-- **Performance:** <2s transaction confirmation times
-- **Security:** Zero critical vulnerabilities in security audit
-
-## Long-term Vision
-
-Samba-SocialTicket aims to become the leading decentralized social ticketing platform, leveraging Soundness Layer's verification capabilities to create a trust-first ecosystem for event management. Our goal is to democratize event access while maintaining security and transparency through blockchain technology.
-
-## Additional Information
-
-**Repository:** https://github.com/pichanesantana-cloud/Samba-SocialTicket  
-**Demo:** [I'm resuming my programming studies, and now with this opportunity to build at SUI, I'm very excited.
-I'm from Brazil, and Brazil's first bootcamp is taking place here.
-My team and I started building this project.
-We'd like to join the team and build even more.]  
-**Contact:** [pichane.santana@gmail.com]  
