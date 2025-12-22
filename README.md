@@ -20,7 +20,7 @@ Verify GitHub ownership and submit vApp and zkApp proposals for Soundness Layer 
 - **social** - Community, content, messaging
 - **gaming** - Games, NFTs, entertainment
 - **infrastructure** - Tools, analytics, monitoring
-- **other** - Innovative ideas
+- **other** - Innovative ideas.
 
 ## Requirements
 
